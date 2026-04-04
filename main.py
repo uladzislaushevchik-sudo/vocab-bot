@@ -639,12 +639,12 @@ def admin_words_prompt(user_id: str, student_id: str) -> str:
         return (
             f"Студент ID: {student_id}\n"
             f"Теперь отправь новые слова.\n\n"
-            f"🔺!!! Если добавляешь несколько слов за раз, обязательно разделяй их запятой."
+            f"⚠️ Если добавляешь несколько слов за раз, обязательно разделяй их запятой."
         )
     return (
         f"Student ID: {student_id}\n"
         f"Now send the new words.\n\n"
-        f"🔺!!! If you send multiple words at once, you must separate them with commas."
+        f"⚠️ If you send multiple words at once, you must separate them with commas."
     )
 
 
