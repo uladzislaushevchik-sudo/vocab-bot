@@ -1,5 +1,5 @@
 {
-  "1383902967": { 
+  "1383902967": {
     "games_played": 8,
     "wins": 0,
     "losses": 3,
@@ -353,8 +353,8 @@
     "language": "en",
     "reminders_enabled": true,
     "reminder_time": "17:00",
-    "last_seen_date": "2026-04-04",
-    "last_reminder_date": "",
+    "last_seen_date": "2026-04-08",
+    "last_reminder_date": "2026-04-08",
     "chat_id": 1383902967,
     "level_stats": {
       "1": {

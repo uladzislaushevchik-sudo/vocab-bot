@@ -665,6 +665,15 @@ def add_words_to_student(student_id: str, words: list[str]) -> tuple[int, int]:
     return added, skipped
 
 
+# Разбивает введенный текст на слова по запятым и переводам строки.
+def split_words_input(text: str) -> list[str]:
+    normalized = text.replace("\r\n", "\n").replace("\r", "\n")
+    parts = []
+    for line in normalized.split("\n"):
+        parts.extend(chunk.strip() for chunk in line.split(","))
+    return [part for part in parts if part]
+
+
 # Возвращает причину, по которой выбранный уровень пока заблокирован.
 def locked_level_text(user_id: str, level: int) -> str:
     words_count = len(student_words.get(user_id, []))
@@ -1346,13 +1355,12 @@ async def text_input_handler(message: Message):
             return
 
         student_id = session.get("admin_target_student_id")
-        raw_words = [word.strip() for word in message.text.split(",")]
-        words = [word for word in raw_words if word]
+        words = split_words_input(message.text)
         if not words:
             if get_language(user_id) == "ru":
-                await message.answer("Не удалось найти слова. Отправь одно или несколько слов через запятую.")
+                await message.answer("Не удалось найти слова. Отправь одно или несколько слов через запятую или с новой строки.")
             else:
-                await message.answer("Could not find any words. Send one or more words separated by commas.")
+                await message.answer("Could not find any words. Send one or more words separated by commas or new lines.")
             return
 
         added, skipped = add_words_to_student(student_id, words)
