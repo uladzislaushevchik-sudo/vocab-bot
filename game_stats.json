@@ -1,13 +1,13 @@
 {
   "1383902967": {
-    "games_played": 8,
+    "games_played": 10,
     "wins": 0,
     "losses": 3,
-    "stopped_games": 5,
+    "stopped_games": 7,
     "best_score": 5,
-    "last_score": 5,
-    "total_correct": 10,
-    "total_wrong": 4,
+    "last_score": 1,
+    "total_correct": 32,
+    "total_wrong": 25,
     "word_stats": {
       "adorable": {
         "shown": 0,
@@ -20,9 +20,9 @@
         "wrong": 0
       },
       "corner": {
-        "shown": 0,
-        "correct": 0,
-        "wrong": 0
+        "shown": 3,
+        "correct": 2,
+        "wrong": 1
       },
       "insurance": {
         "shown": 0,
@@ -30,18 +30,18 @@
         "wrong": 0
       },
       "lung": {
-        "shown": 0,
+        "shown": 2,
         "correct": 0,
-        "wrong": 0
+        "wrong": 2
       },
       "lung cancer": {
-        "shown": 1,
-        "correct": 1,
+        "shown": 2,
+        "correct": 2,
         "wrong": 0
       },
       "whiff": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 2,
+        "correct": 2,
         "wrong": 0
       },
       "not a clue": {
@@ -55,13 +55,13 @@
         "wrong": 0
       },
       "schemer": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "exile": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "infer": {
@@ -70,9 +70,9 @@
         "wrong": 0
       },
       "convince": {
-        "shown": 1,
-        "correct": 0,
-        "wrong": 1
+        "shown": 3,
+        "correct": 1,
+        "wrong": 2
       },
       "illustrate": {
         "shown": 0,
@@ -80,19 +80,19 @@
         "wrong": 0
       },
       "show": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "represent": {
-        "shown": 0,
-        "correct": 0,
-        "wrong": 0
+        "shown": 2,
+        "correct": 1,
+        "wrong": 1
       },
       "describe": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "give information": {
         "shown": 0,
@@ -105,19 +105,19 @@
         "wrong": 0
       },
       "depict": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "achieve": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "affect": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "analyze": {
         "shown": 0,
@@ -130,8 +130,8 @@
         "wrong": 0
       },
       "approach": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "argue": {
@@ -145,13 +145,13 @@
         "wrong": 0
       },
       "assume": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "avoid": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "benefit": {
@@ -170,9 +170,9 @@
         "wrong": 0
       },
       "complain": {
-        "shown": 1,
+        "shown": 3,
         "correct": 0,
-        "wrong": 1
+        "wrong": 3
       },
       "conclude": {
         "shown": 0,
@@ -200,9 +200,9 @@
         "wrong": 0
       },
       "create": {
-        "shown": 1,
-        "correct": 0,
-        "wrong": 1
+        "shown": 3,
+        "correct": 1,
+        "wrong": 2
       },
       "decide": {
         "shown": 0,
@@ -210,14 +210,14 @@
         "wrong": 0
       },
       "define": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "demand": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "depend": {
         "shown": 1,
@@ -250,9 +250,9 @@
         "wrong": 0
       },
       "expect": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "experience": {
         "shown": 0,
@@ -270,13 +270,13 @@
         "wrong": 0
       },
       "improve": {
-        "shown": 0,
-        "correct": 0,
-        "wrong": 0
+        "shown": 2,
+        "correct": 1,
+        "wrong": 1
       },
       "increase": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "influence": {
@@ -290,14 +290,14 @@
         "wrong": 0
       },
       "manage": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "occur": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "perform": {
         "shown": 0,
@@ -310,13 +310,13 @@
         "wrong": 0
       },
       "provide": {
-        "shown": 1,
-        "correct": 0,
-        "wrong": 1
+        "shown": 4,
+        "correct": 1,
+        "wrong": 3
       },
       "realize": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       },
       "reduce": {
@@ -325,14 +325,14 @@
         "wrong": 0
       },
       "require": {
-        "shown": 0,
-        "correct": 0,
-        "wrong": 0
+        "shown": 3,
+        "correct": 2,
+        "wrong": 1
       },
       "respond": {
-        "shown": 0,
+        "shown": 1,
         "correct": 0,
-        "wrong": 0
+        "wrong": 1
       },
       "result": {
         "shown": 0,
@@ -345,26 +345,26 @@
         "wrong": 0
       },
       "support": {
-        "shown": 0,
-        "correct": 0,
+        "shown": 1,
+        "correct": 1,
         "wrong": 0
       }
     },
     "language": "en",
     "reminders_enabled": true,
     "reminder_time": "17:00",
-    "last_seen_date": "2026-04-08",
-    "last_reminder_date": "2026-04-08",
+    "last_seen_date": "2026-04-09",
+    "last_reminder_date": "2026-04-09",
     "chat_id": 1383902967,
     "level_stats": {
       "1": {
-        "games_played": 0,
+        "games_played": 2,
         "wins": 0,
         "losses": 0,
-        "stopped_games": 0,
-        "correct_answers": 0,
-        "wrong_answers": 0,
-        "best_score": 0
+        "stopped_games": 2,
+        "correct_answers": 3,
+        "wrong_answers": 4,
+        "best_score": 2
       },
       "2": {
         "games_played": 0,

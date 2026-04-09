@@ -4,7 +4,9 @@ import random
 from datetime import datetime
 from difflib import SequenceMatcher
 from pathlib import Path
+from urllib.parse import quote
 
+import aiohttp
 from aiogram import Bot, Dispatcher, F
 from aiogram.filters import Command, CommandStart
 from aiogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup, Message
@@ -15,6 +17,7 @@ VOCAB_FILE = BASE_DIR / "vocabularies.json"
 STUDENTS_FILE = BASE_DIR / "students.json"
 STATS_FILE = BASE_DIR / "game_stats.json"
 TRANSLATIONS_FILE = BASE_DIR / "translation_cache.json"
+DEFINITIONS_FILE = BASE_DIR / "definition_cache.json"
 
 # test_token заканчивается на l4IRWAd2vU
 # main_token заканчивается на NutXo
@@ -28,8 +31,33 @@ student_words = {}
 students = {}
 stats_store = {}
 translation_cache = {}
+definition_cache = {}
 sessions = {}
 ADMIN_IDS = {"1383902967", "449856263"}
+definition_service_available = True
+
+SUCCESS_QUOTES = [
+    "“I’m not lazy to learn English, I’m just giving the words a chance to get used to me.”\n— allegedly said by Albert Einstein",
+    "“If I don’t understand English, that’s not my problem — English just hasn’t earned me yet.”\n— attributed to Friedrich Nietzsche",
+    "“My level of English: I understand everything… until people start speaking.”\n— said by Winston Churchill",
+    "“I’ve been learning English for 5 years — now I just need to start.”\n— from the diaries of Leonardo da Vinci",
+    "“Google Translate is my best teacher and my worst enemy.”\n— claimed by Steve Jobs",
+    "“I know English: ‘hello’, ‘bye’, and ‘repeat, please’. That’s enough to survive.”\n— said by Christopher Columbus",
+    "“The hardest part about English is remembering that you’re actually learning it.”\n— noted by Socrates",
+    "“I don’t make mistakes in English — I create new dialects.”\n— declared by William Shakespeare",
+    "“Listening is when you listen and hope for the best.”\n— said by Elon Musk",
+    "“My vocabulary is growing… but it’s too shy to show up in conversation.”\n— admitted by Bill Gates",
+    "“I’ll start learning English on Monday… for the third year in a row.”\n— allegedly said by Arnold Schwarzenegger",
+    "“My English is perfect — it’s just that nobody understands it.”\n— attributed to Salvador Dalí",
+    "“Every time I learn a new word, an old one quietly leaves.”\n— said by Isaac Newton",
+    "“Grammar is when you understand everything but still say it wrong.”\n— noted by Mark Twain",
+    "“I’m not afraid to speak English. I’m afraid people will understand me.”\n— declared by Sigmund Freud",
+    "“Practice makes perfect… but I’m still at the stage where practice makes panic.”\n— said by Michael Jordan",
+    "“My accent is my individuality — nobody asked for it, though.”\n— claimed by Elvis Presley",
+    "“I understand spoken English… if it’s slow, clear, and preferably in Russian.”\n— said by Leo Tolstoy",
+    "“The most useful English word is ‘sorry’ — it saves almost everything.”\n— noted by Elizabeth II",
+    "“Learning English is like sports: you watch a lot, but do very little.”\n— admitted by Muhammad Ali",
+]
 
 TEXTS = {
     "ru": {
@@ -263,6 +291,50 @@ def get_translation(word: str) -> str:
     translation_cache[word] = translated
     save_json(TRANSLATIONS_FILE, translation_cache)
     return translated
+
+
+# Получает английское определение слова из внешнего словаря и кеширует только удачные ответы.
+async def get_definition(word: str) -> str | None:
+    global definition_service_available
+
+    cached = definition_cache.get(word)
+    if isinstance(cached, str) and cached.strip():
+        return cached
+
+    if not definition_service_available:
+        return None
+
+    url = f"https://api.dictionaryapi.dev/api/v2/entries/en/{quote(word)}"
+    payload = None
+    try:
+        timeout = aiohttp.ClientTimeout(total=4)
+        async with aiohttp.ClientSession(timeout=timeout) as session:
+            async with session.get(url) as response:
+                if response.status != 200:
+                    return None
+                payload = await response.json()
+    except (aiohttp.ClientError, asyncio.TimeoutError, json.JSONDecodeError):
+        definition_service_available = False
+        return None
+
+    definition = None
+    if isinstance(payload, list):
+        for entry in payload:
+            for meaning in entry.get("meanings", []):
+                for item in meaning.get("definitions", []):
+                    text = item.get("definition", "").strip()
+                    if text:
+                        definition = text
+                        break
+                if definition:
+                    break
+            if definition:
+                break
+
+    if definition:
+        definition_cache[word] = definition
+        save_json(DEFINITIONS_FILE, definition_cache)
+    return definition
 
 
 # Упрощает текст для более стабильного сравнения похожести.
@@ -751,13 +823,17 @@ def ensure_session(user_id: str) -> dict:
             "user_id": user_id,
             "active": False,
             "level": 1,
+            "question_type": "choice",
             "score": 0,
             "correct_answers": 0,
             "wrong_answers": 0,
             "asked_words": [],
             "all_words": [],
             "current_word": None,
+            "prompt_word": None,
             "current_answer": None,
+            "definition_text": None,
+            "attempts_left": 0,
             "options": [],
             "awaiting_reminder_time": False,
             "awaiting_admin_student_id": False,
@@ -813,8 +889,35 @@ def render_question_text(session: dict) -> str:
     asked = len(session["asked_words"]) + 1
     total = len(session["all_words"])
     prompt_word = session["prompt_word"]
+    user_id = session["user_id"]
+    if session["question_type"] == "definition_typing":
+        if get_language(user_id) == "ru":
+            return (
+                f"Счет: {session['score']}\n"
+                f"Слово {asked} из {total}\n"
+                f"Попыток осталось: {session['attempts_left']}\n\n"
+                f"Прочитай описание и напиши английское слово:\n{prompt_word}"
+            )
+        return (
+            f"Score: {session['score']}\n"
+            f"Word {asked} of {total}\n"
+            f"Attempts left: {session['attempts_left']}\n\n"
+            f"Read the definition and type the English word:\n{prompt_word}"
+        )
+    if session["question_type"] == "typing_translation":
+        if get_language(user_id) == "ru":
+            return (
+                f"Счет: {session['score']}\n"
+                f"Слово {asked} из {total}\n\n"
+                f"Напиши английское слово:\n{prompt_word}"
+            )
+        return (
+            f"Score: {session['score']}\n"
+            f"Word {asked} of {total}\n\n"
+            f"Type the English word:\n{prompt_word}"
+        )
     return t(
-        session["user_id"],
+        user_id,
         "score_header",
         score=session["score"],
         index=asked,
@@ -824,7 +927,7 @@ def render_question_text(session: dict) -> str:
 
 
 # Выбирает новое слово, находит правильный перевод и собирает варианты ответа.
-def prepare_question(user_id: str, session: dict) -> bool:
+async def prepare_question(user_id: str, session: dict) -> bool:
     next_word = choose_next_word(user_id, session)
     if not next_word:
         return False
@@ -832,6 +935,20 @@ def prepare_question(user_id: str, session: dict) -> bool:
     level = session["level"]
     prompt_word = next_word
     options = []
+    session["definition_text"] = None
+    session["attempts_left"] = 0
+
+    if random.random() < 0.25:
+        definition = await get_definition(next_word)
+        if definition:
+            session["current_word"] = next_word
+            session["prompt_word"] = definition
+            session["current_answer"] = next_word
+            session["definition_text"] = definition
+            session["attempts_left"] = 3
+            session["question_type"] = "definition_typing"
+            session["options"] = []
+            return True
 
     if level == 1:
         correct_answer = get_translation(next_word)
@@ -839,6 +956,7 @@ def prepare_question(user_id: str, session: dict) -> bool:
         options = distractors + [correct_answer]
         random.shuffle(options)
         prompt_word = next_word
+        session["question_type"] = "choice"
     elif level == 2:
         correct_answer = next_word
         prompt_word = get_translation(next_word)
@@ -851,10 +969,12 @@ def prepare_question(user_id: str, session: dict) -> bool:
                 distractors.append(candidate)
         options = distractors + [correct_answer]
         random.shuffle(options)
+        session["question_type"] = "choice"
     else:
         correct_answer = next_word
         prompt_word = get_translation(next_word)
         options = []
+        session["question_type"] = "typing_translation"
 
     session["current_word"] = next_word
     session["prompt_word"] = prompt_word
@@ -894,6 +1014,32 @@ def render_typed_feedback(user_id: str, prompt_word: str, typed_answer: str, cor
     return (
         f"Word: {prompt_word}\n\n"
         f"Your answer: {typed_answer}\n"
+        f"Correct answer: {correct_answer}"
+    )
+
+
+# Возвращает случайную фразу, которая показывается после правильного ответа на вопрос по определению.
+def random_success_quote() -> str:
+    return random.choice(SUCCESS_QUOTES)
+
+
+# Показывает результат задания по определению после успешного ответа.
+def definition_success_text(user_id: str) -> str:
+    prefix = "Правильно.\n\n" if get_language(user_id) == "ru" else "Correct.\n\n"
+    return prefix + random_success_quote()
+
+
+# Показывает правильный ответ, если все попытки в задании по определению закончились.
+def definition_failure_text(user_id: str, prompt_word: str, correct_answer: str) -> str:
+    if get_language(user_id) == "ru":
+        return (
+            f"Попытки закончились.\n\n"
+            f"Описание:\n{prompt_word}\n\n"
+            f"Правильный ответ: {correct_answer}"
+        )
+    return (
+        f"No attempts left.\n\n"
+        f"Definition:\n{prompt_word}\n\n"
         f"Correct answer: {correct_answer}"
     )
 
@@ -957,7 +1103,7 @@ async def start_game(target, user_id: str, level: int) -> None:
     session["options"] = []
     session["awaiting_reminder_time"] = False
 
-    if not prepare_question(user_id, session):
+    if not await prepare_question(user_id, session):
         session["active"] = False
         text = t(user_id, "prepare_failed")
         if isinstance(target, Message):
@@ -967,7 +1113,7 @@ async def start_game(target, user_id: str, level: int) -> None:
         return
 
     text = render_question_text(session)
-    keyboard = None if level == 3 else build_in_game_kb(user_id, session["options"])
+    keyboard = build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None
     if isinstance(target, Message):
         await target.answer(text, reply_markup=keyboard)
     else:
@@ -1276,7 +1422,7 @@ async def answer_handler(callback: CallbackQuery):
         )
         await asyncio.sleep(1)
 
-        if not prepare_question(user_id, session):
+        if not await prepare_question(user_id, session):
             await finish_game(
                 callback,
                 user_id,
@@ -1288,7 +1434,7 @@ async def answer_handler(callback: CallbackQuery):
         await respond_to_callback(
             callback,
             render_question_text(session),
-            reply_markup=build_in_game_kb(user_id, session["options"]) if session["level"] != 3 else None,
+            reply_markup=build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None,
         )
         return
 
@@ -1301,7 +1447,7 @@ async def answer_handler(callback: CallbackQuery):
     )
     await asyncio.sleep(1)
 
-    if not prepare_question(user_id, session):
+    if not await prepare_question(user_id, session):
         await finish_game(
             callback,
             user_id,
@@ -1313,7 +1459,7 @@ async def answer_handler(callback: CallbackQuery):
     await respond_to_callback(
         callback,
         render_question_text(session),
-        reply_markup=build_in_game_kb(user_id, session["options"]) if session["level"] != 3 else None,
+        reply_markup=build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None,
     )
 
 
@@ -1380,7 +1526,10 @@ async def text_input_handler(message: Message):
         return
 
     if not session.get("awaiting_reminder_time"):
-        if not session["active"] or session.get("level") != 3 or session["current_word"] is None:
+        if not session["active"] or session["current_word"] is None:
+            return
+
+        if session["question_type"] not in {"typing_translation", "definition_typing"}:
             return
 
         typed_answer = normalize_english_answer(message.text.strip())
@@ -1388,28 +1537,50 @@ async def text_input_handler(message: Message):
         current_word = session["current_word"]
         prompt_word = session["prompt_word"]
 
-        if typed_answer == correct_answer:
-            register_answer(user_id, current_word, True)
-            session["score"] += 1
-            session["correct_answers"] += 1
-            session["asked_words"].append(current_word)
-            await message.answer(render_typed_feedback(user_id, prompt_word, typed_answer or "-", session["current_answer"]))
-            await asyncio.sleep(1)
+        if session["question_type"] == "definition_typing":
+            if typed_answer == correct_answer:
+                register_answer(user_id, current_word, True)
+                session["score"] += 1
+                session["correct_answers"] += 1
+                session["asked_words"].append(current_word)
+                await message.answer(definition_success_text(user_id))
+                await asyncio.sleep(1)
+            else:
+                session["attempts_left"] -= 1
+                if session["attempts_left"] > 0:
+                    await message.answer(render_question_text(session))
+                    return
+                register_answer(user_id, current_word, False)
+                session["wrong_answers"] += 1
+                session["asked_words"].append(current_word)
+                await message.answer(definition_failure_text(user_id, prompt_word, session["current_answer"]))
+                await asyncio.sleep(1)
         else:
-            register_answer(user_id, current_word, False)
-            session["wrong_answers"] += 1
-            session["asked_words"].append(current_word)
-            await message.answer(render_typed_feedback(user_id, prompt_word, typed_answer or "-", session["current_answer"]))
-            await asyncio.sleep(1)
+            if typed_answer == correct_answer:
+                register_answer(user_id, current_word, True)
+                session["score"] += 1
+                session["correct_answers"] += 1
+                session["asked_words"].append(current_word)
+                await message.answer(render_typed_feedback(user_id, prompt_word, typed_answer or "-", session["current_answer"]))
+                await asyncio.sleep(1)
+            else:
+                register_answer(user_id, current_word, False)
+                session["wrong_answers"] += 1
+                session["asked_words"].append(current_word)
+                await message.answer(render_typed_feedback(user_id, prompt_word, typed_answer or "-", session["current_answer"]))
+                await asyncio.sleep(1)
 
-        if not prepare_question(user_id, session):
+        if not await prepare_question(user_id, session):
             class TempCallback:
                 def __init__(self, msg):
                     self.message = msg
             await finish_game(TempCallback(message), user_id, "win", round_results_text(user_id, session))
             return
 
-        await message.answer(render_question_text(session))
+        await message.answer(
+            render_question_text(session),
+            reply_markup=build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None,
+        )
         return
 
     parsed_time = parse_reminder_time(message.text.strip())
@@ -1463,12 +1634,21 @@ async def reminder_loop():
 
 # Загружает данные и запускает polling вместе с фоновым циклом напоминаний.
 async def main():
-    global student_words, students, stats_store, translation_cache
+    global student_words, students, stats_store, translation_cache, definition_cache, definition_service_available
 
     student_words = load_json(VOCAB_FILE, {})
     students = load_json(STUDENTS_FILE, {})
     stats_store = load_json(STATS_FILE, {})
     translation_cache = load_json(TRANSLATIONS_FILE, {})
+    raw_definition_cache = load_json(DEFINITIONS_FILE, {})
+    definition_cache = {
+        word: definition
+        for word, definition in raw_definition_cache.items()
+        if isinstance(definition, str) and definition.strip()
+    }
+    if definition_cache != raw_definition_cache:
+        save_json(DEFINITIONS_FILE, definition_cache)
+    definition_service_available = True
     reminder_task = asyncio.create_task(reminder_loop())
     try:
         await dp.start_polling(bot)
