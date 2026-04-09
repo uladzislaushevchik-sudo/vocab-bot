@@ -1,0 +1,5 @@
+game_stats.json
+translation_cache.json
+definition_cache.json
+__pycache__/
+.venv/
