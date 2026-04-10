@@ -938,7 +938,7 @@ async def prepare_question(user_id: str, session: dict) -> bool:
     session["definition_text"] = None
     session["attempts_left"] = 0
 
-    if random.random() < 0.25:
+    if random.random() < 0.1:
         definition = await get_definition(next_word)
         if definition:
             session["current_word"] = next_word
