@@ -15,7 +15,7 @@ from deep_translator import GoogleTranslator
 BASE_DIR = Path(__file__).resolve().parent
 VOCAB_FILE = BASE_DIR / "vocabularies.json"
 STUDENTS_FILE = BASE_DIR / "students.json"
-STATS_FILE = BASE_DIR / "game_stats.json"
+STATS_FILE = BASE_DIR / "game_statsы.json"
 TRANSLATIONS_FILE = BASE_DIR / "translation_cache.json"
 DEFINITIONS_FILE = BASE_DIR / "definition_cache.json"
 
@@ -32,6 +32,7 @@ students = {}
 stats_store = {}
 translation_cache = {}
 definition_cache = {}
+definition_miss_words = set()
 sessions = {}
 ADMIN_IDS = {"1383902967", "449856263"}
 definition_service_available = True
@@ -301,6 +302,9 @@ async def get_definition(word: str) -> str | None:
     if isinstance(cached, str) and cached.strip():
         return cached
 
+    if word in definition_miss_words:
+        return None
+
     if not definition_service_available:
         return None
 
@@ -311,6 +315,7 @@ async def get_definition(word: str) -> str | None:
         async with aiohttp.ClientSession(timeout=timeout) as session:
             async with session.get(url) as response:
                 if response.status != 200:
+                    definition_miss_words.add(word)
                     return None
                 payload = await response.json()
     except (aiohttp.ClientError, asyncio.TimeoutError, json.JSONDecodeError):
@@ -334,6 +339,8 @@ async def get_definition(word: str) -> str | None:
     if definition:
         definition_cache[word] = definition
         save_json(DEFINITIONS_FILE, definition_cache)
+    else:
+        definition_miss_words.add(word)
     return definition
 
 
@@ -469,8 +476,9 @@ def build_levels_kb(user_id: str) -> InlineKeyboardMarkup:
         1: "Уровень 1: English -> Russian" if get_language(user_id) == "ru" else "Level 1: English -> Russian",
         2: "Уровень 2: Russian -> English" if get_language(user_id) == "ru" else "Level 2: Russian -> English",
         3: "Уровень 3: Type English word" if get_language(user_id) == "ru" else "Level 3: Type English word",
+        4: "Уровень 4: Definition -> English" if get_language(user_id) == "ru" else "Level 4: Definition -> English",
     }
-    for level in (1, 2, 3):
+    for level in (1, 2, 3, 4):
         if level in unlocked:
             rows.append([InlineKeyboardButton(text=labels[level], callback_data=f"level:{level}")])
         else:
@@ -649,6 +657,8 @@ def available_levels(user_id: str) -> list[int]:
         levels.append(2)
     if words_count >= 50 and level_accuracy_percent(user_id, 2) >= 80:
         levels.append(3)
+    if words_count > 0:
+        levels.append(4)
     return levels
 
 
@@ -688,13 +698,15 @@ def levels_text(user_id: str) -> str:
             "Выбери уровень игры.\n\n"
             "Уровень 1 доступен сразу.\n"
             f"Уровень 2: нужно минимум 50 слов и 30% правильных ответов в уровне 1. Сейчас: слов {words_count}, точность {level1}%.\n"
-            f"Уровень 3: нужно минимум 50 слов и 80% правильных ответов в уровне 2. Сейчас: слов {words_count}, точность {level2}%."
+            f"Уровень 3: нужно минимум 50 слов и 80% правильных ответов в уровне 2. Сейчас: слов {words_count}, точность {level2}%.\n"
+            "Уровень 4: описание слова -> английское слово, доступен сразу."
         )
     return (
         "Choose a game level.\n\n"
         "Level 1 is available immediately.\n"
         f"Level 2: requires at least 50 words and 30% correct answers in level 1. Now: words {words_count}, accuracy {level1}%.\n"
-        f"Level 3: requires at least 50 words and 80% correct answers in level 2. Now: words {words_count}, accuracy {level2}%."
+        f"Level 3: requires at least 50 words and 80% correct answers in level 2. Now: words {words_count}, accuracy {level2}%.\n"
+        "Level 4: definition -> English word, available immediately."
     )
 
 
@@ -754,6 +766,10 @@ def locked_level_text(user_id: str, level: int) -> str:
         if get_language(user_id) == "ru":
             return f"Уровень 2 пока закрыт.\nНужно 50 слов и 30% правильных ответов в уровне 1.\nСейчас: слов {words_count}, точность {accuracy}%."
         return f"Level 2 is still locked.\nIt requires 50 words and 30% correct answers in level 1.\nNow: words {words_count}, accuracy {accuracy}%."
+    if level == 4:
+        if get_language(user_id) == "ru":
+            return "Уровень 4 пока недоступен, потому что в словаре нет слов."
+        return "Level 4 is unavailable because the vocabulary is empty."
     accuracy = level_accuracy_percent(user_id, 2)
     if get_language(user_id) == "ru":
         return f"Уровень 3 пока закрыт.\nНужно 50 слов и 80% правильных ответов в уровне 2.\nСейчас: слов {words_count}, точность {accuracy}%."
@@ -938,17 +954,22 @@ async def prepare_question(user_id: str, session: dict) -> bool:
     session["definition_text"] = None
     session["attempts_left"] = 0
 
-    if random.random() < 0.1:
-        definition = await get_definition(next_word)
-        if definition:
-            session["current_word"] = next_word
+    if level == 4:
+        remaining_words = [word for word in session["all_words"] if word not in set(session["asked_words"])]
+        random.shuffle(remaining_words)
+        for candidate_word in remaining_words:
+            definition = await get_definition(candidate_word)
+            if not definition:
+                continue
+            session["current_word"] = candidate_word
             session["prompt_word"] = definition
-            session["current_answer"] = next_word
+            session["current_answer"] = candidate_word
             session["definition_text"] = definition
             session["attempts_left"] = 3
             session["question_type"] = "definition_typing"
             session["options"] = []
             return True
+        return False
 
     if level == 1:
         correct_answer = get_translation(next_word)
