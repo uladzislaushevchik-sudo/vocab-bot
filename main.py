@@ -1,8 +1,12 @@
 import asyncio
 import json
+import logging
+import os
 import random
+import shutil
 from datetime import datetime
 from difflib import SequenceMatcher
+from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from urllib.parse import quote
 
@@ -15,13 +19,89 @@ from deep_translator import GoogleTranslator
 BASE_DIR = Path(__file__).resolve().parent
 VOCAB_FILE = BASE_DIR / "vocabularies.json"
 STUDENTS_FILE = BASE_DIR / "students.json"
-STATS_FILE = BASE_DIR / "game_statsы.json"
+STATS_FILE = BASE_DIR / "game_stats.json"
 TRANSLATIONS_FILE = BASE_DIR / "translation_cache.json"
 DEFINITIONS_FILE = BASE_DIR / "definition_cache.json"
+ENV_FILE = BASE_DIR / ".env"
+TOKEN_FILE = BASE_DIR / "token.txt"
+LOG_FILE = BASE_DIR / "bot.log"
+BACKUP_DIR = BASE_DIR / "backups"
+BACKUP_TARGETS = {
+    VOCAB_FILE.name,
+    STUDENTS_FILE.name,
+    STATS_FILE.name,
+    TRANSLATIONS_FILE.name,
+    DEFINITIONS_FILE.name,
+}
 
-# test_token заканчивается на l4IRWAd2vU
-# main_token заканчивается на NutXo
-BOT_TOKEN = "8650502659:AAH6lo6vj5PACtkD0AV9tqdKDAeBG_NutXo"
+# Настраивает логирование в файл и консоль, чтобы проще было разбирать сбои бота.
+def configure_logging() -> None:
+    formatter = logging.Formatter("%(asctime)s | %(levelname)s | %(name)s | %(message)s")
+    file_handler = RotatingFileHandler(LOG_FILE, maxBytes=1_000_000, backupCount=3, encoding="utf-8")
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    root_logger = logging.getLogger()
+    root_logger.setLevel(logging.INFO)
+    root_logger.handlers.clear()
+    root_logger.addHandler(file_handler)
+    root_logger.addHandler(stream_handler)
+
+
+# Подгружает переменные окружения из .env, если локальный файл уже создан.
+def load_env_file(path: Path) -> None:
+    if not path.exists():
+        return
+
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, value = line.split("=", maxsplit=1)
+        os.environ.setdefault(key.strip(), value.strip().strip('"').strip("'"))
+
+
+# Читает токен из token.txt как запасной вариант, если .env пока не настроен.
+def load_token_from_file(path: Path) -> str | None:
+    if not path.exists():
+        return None
+
+    for raw_line in path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if "=" in line:
+            key, value = line.split("=", maxsplit=1)
+            if key.strip() in {"BOT_TOKEN", "TELEGRAM_BOT_TOKEN", "MAIN_BOT_TOKEN"}:
+                token = value.strip().strip('"').strip("'")
+                if token:
+                    return token
+        elif ":" in line:
+            return line
+    return None
+
+
+configure_logging()
+logger = logging.getLogger("vocbot")
+
+
+# Ищет токен в .env или token.txt и не даёт запустить бота без секрета.
+def load_bot_token() -> str:
+    load_env_file(ENV_FILE)
+    token = os.environ.get("TELEGRAM_BOT_TOKEN") or os.environ.get("BOT_TOKEN")
+    if token:
+        return token
+
+    token = load_token_from_file(TOKEN_FILE)
+    if token:
+        logger.warning("BOT token loaded from token.txt fallback. Move it to .env when convenient.")
+        return token
+
+    raise RuntimeError("Telegram bot token is missing. Add TELEGRAM_BOT_TOKEN to .env or token.txt.")
+
+
+BOT_TOKEN = load_bot_token()
 
 
 bot = Bot(token=BOT_TOKEN)
@@ -152,19 +232,44 @@ async def start_command(message: Message):
     await message.answer('Привет')
 
 
+# Делает ежедневную резервную копию важных JSON-файлов и оставляет только свежие копии.
+def backup_file_if_needed(path: Path, keep_days: int = 14) -> None:
+    if path.name not in BACKUP_TARGETS or not path.exists():
+        return
+
+    BACKUP_DIR.mkdir(parents=True, exist_ok=True)
+    backup_name = f"{path.stem}-{datetime.now().strftime('%Y%m%d')}{path.suffix}"
+    backup_path = BACKUP_DIR / backup_name
+    if not backup_path.exists():
+        shutil.copy2(path, backup_path)
+
+    old_backups = sorted(BACKUP_DIR.glob(f"{path.stem}-*{path.suffix}"))
+    for outdated_backup in old_backups[:-keep_days]:
+        outdated_backup.unlink(missing_ok=True)
+
+
 # Загружает данные из JSON-файла и возвращает значение по умолчанию, если файла нет или он битый.
 def load_json(path: Path, default):
     try:
         with path.open("r", encoding="utf-8") as file:
             return json.load(file)
     except (FileNotFoundError, json.JSONDecodeError):
+        logger.warning("Could not load %s. Using default value.", path.name)
         return default
 
 
-# Сохраняет словари и статистику в JSON-файл в читаемом виде.
+# Сохраняет JSON атомарно: сначала пишет во временный файл, потом подменяет основной.
 def save_json(path: Path, data) -> None:
-    with path.open("w", encoding="utf-8") as file:
-        json.dump(data, file, ensure_ascii=False, indent=2)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    backup_file_if_needed(path)
+    temp_path = path.with_suffix(f"{path.suffix}.tmp")
+    try:
+        with temp_path.open("w", encoding="utf-8") as file:
+            json.dump(data, file, ensure_ascii=False, indent=2)
+        temp_path.replace(path)
+    finally:
+        if temp_path.exists():
+            temp_path.unlink(missing_ok=True)
 
 
 # Возвращает профиль пользователя и при первом обращении создает в нем все нужные поля.
@@ -286,7 +391,8 @@ def get_translation(word: str) -> str:
 
     try:
         translated = translator.translate(word)
-    except Exception:
+    except Exception as exc:
+        logger.warning("Translation failed for %s: %s", word, exc)
         translated = word
 
     translation_cache[word] = translated
@@ -316,9 +422,11 @@ async def get_definition(word: str) -> str | None:
             async with session.get(url) as response:
                 if response.status != 200:
                     definition_miss_words.add(word)
+                    logger.info("Definition was not found for %s. HTTP status: %s", word, response.status)
                     return None
                 payload = await response.json()
-    except (aiohttp.ClientError, asyncio.TimeoutError, json.JSONDecodeError):
+    except (aiohttp.ClientError, asyncio.TimeoutError, json.JSONDecodeError) as exc:
+        logger.warning("Definition service error for %s: %s", word, exc)
         definition_service_available = False
         return None
 
@@ -451,7 +559,8 @@ def build_distractors(user_id: str, target_word: str, correct_answer: str, optio
 async def respond_to_callback(callback: CallbackQuery, text: str, reply_markup: InlineKeyboardMarkup | None = None) -> None:
     try:
         await callback.message.edit_text(text, reply_markup=reply_markup)
-    except Exception:
+    except Exception as exc:
+        logger.info("Falling back to a new message after edit_text failure: %s", exc)
         await callback.message.answer(text, reply_markup=reply_markup)
 
 
@@ -1647,7 +1756,8 @@ async def reminder_loop():
                 )
                 profile["last_reminder_date"] = today
                 save_json(STATS_FILE, stats_store)
-            except Exception:
+            except Exception as exc:
+                logger.warning("Failed to send reminder to %s: %s", user_id, exc)
                 continue
 
         await asyncio.sleep(60)
@@ -1670,6 +1780,14 @@ async def main():
     if definition_cache != raw_definition_cache:
         save_json(DEFINITIONS_FILE, definition_cache)
     definition_service_available = True
+    logger.info(
+        "Bot startup completed. vocab_users=%s students=%s stats_profiles=%s cached_translations=%s cached_definitions=%s",
+        len(student_words),
+        len(students),
+        len(stats_store),
+        len(translation_cache),
+        len(definition_cache),
+    )
     reminder_task = asyncio.create_task(reminder_loop())
     try:
         await dp.start_polling(bot)

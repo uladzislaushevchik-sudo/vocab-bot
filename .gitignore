@@ -3,3 +3,8 @@ translation_cache.json
 definition_cache.json
 __pycache__/
 .venv/
+.env
+token.txt
+bot.log
+backups/
+*.tmp
