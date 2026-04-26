@@ -1,0 +1,12 @@
+translation_cache.json
+definition_cache.json
+__pycache__/
+*.pyc
+.venv/
+token.txt
+bot.log
+app/config/bot.log
+backups/
+*.tmp
+.tmp/
+app/**/__pycache__/
