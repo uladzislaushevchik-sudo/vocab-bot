@@ -658,6 +658,14 @@ def build_in_game_kb(user_id: str, options: list[str]) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
+def build_question_kb(user_id: str, session: dict) -> InlineKeyboardMarkup | None:
+    if session["question_type"] == "choice":
+        return build_in_game_kb(user_id, session["options"])
+    if session["question_type"] == "definition_typing":
+        return build_in_game_kb(user_id, [])
+    return None
+
+
 # �Yоказ�<вае�, дейс�,вия после заве�?�^ения иг�?�<: пе�?езап�fск или возв�?а�, в мен�Z.
 def build_post_game_kb(user_id: str) -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(
@@ -1740,7 +1748,7 @@ async def start_game(target, user_id: str, level: int) -> None:
         return
 
     text = render_question_text(session)
-    keyboard = build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None
+    keyboard = build_question_kb(user_id, session)
     if isinstance(target, Message):
         await target.answer(text, reply_markup=keyboard)
     else:
@@ -2493,7 +2501,7 @@ async def answer_handler(callback: CallbackQuery):
         await respond_to_callback(
             callback,
             render_question_text(session),
-            reply_markup=build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None,
+            reply_markup=build_question_kb(user_id, session),
         )
         return
 
@@ -2518,7 +2526,7 @@ async def answer_handler(callback: CallbackQuery):
     await respond_to_callback(
         callback,
         render_question_text(session),
-        reply_markup=build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None,
+        reply_markup=build_question_kb(user_id, session),
     )
 
 
@@ -2886,7 +2894,10 @@ async def text_input_handler(message: Message):
             else:
                 session["attempts_left"] -= 1
                 if session["attempts_left"] > 0:
-                    await message.answer(render_question_text(session))
+                    await message.answer(
+                        render_question_text(session),
+                        reply_markup=build_question_kb(user_id, session),
+                    )
                     return
                 register_answer(user_id, current_word, False)
                 session["wrong_answers"] += 1
@@ -2917,7 +2928,7 @@ async def text_input_handler(message: Message):
 
         await message.answer(
             render_question_text(session),
-            reply_markup=build_in_game_kb(user_id, session["options"]) if session["question_type"] == "choice" else None,
+            reply_markup=build_question_kb(user_id, session),
         )
         return
 
