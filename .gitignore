@@ -3,7 +3,6 @@ definition_cache.json
 __pycache__/
 *.pyc
 .venv/
-.env
 token.txt
 bot.log
 app/config/bot.log
