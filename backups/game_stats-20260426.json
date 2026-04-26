@@ -1,0 +1,5019 @@
+{
+  "1383902967": {
+    "games_played": 12,
+    "wins": 0,
+    "losses": 3,
+    "stopped_games": 9,
+    "best_score": 5,
+    "last_score": 0,
+    "total_correct": 33,
+    "total_wrong": 26,
+    "language": "en",
+    "english_level": "B2",
+    "reminders_enabled": true,
+    "reminder_time": "17:00",
+    "last_seen_date": "2026-04-25",
+    "last_reminder_date": "2026-04-09",
+    "chat_id": 1383902967,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {
+      "1": {
+        "games_played": 4,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 4,
+        "correct_answers": 3,
+        "wrong_answers": 4,
+        "best_score": 2
+      },
+      "2": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "3": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "4": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      }
+    },
+    "word_stats": {
+      "adorable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "favor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "corner": {
+        "shown": 3,
+        "correct": 2,
+        "wrong": 1
+      },
+      "insurance": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "lung": {
+        "shown": 2,
+        "correct": 0,
+        "wrong": 2
+      },
+      "lung cancer": {
+        "shown": 2,
+        "correct": 2,
+        "wrong": 0
+      },
+      "whiff": {
+        "shown": 2,
+        "correct": 2,
+        "wrong": 0
+      },
+      "not a clue": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "flunk": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "schemer": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "exile": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "infer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "convince": {
+        "shown": 3,
+        "correct": 1,
+        "wrong": 2
+      },
+      "illustrate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "show": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "represent": {
+        "shown": 2,
+        "correct": 1,
+        "wrong": 1
+      },
+      "describe": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "give information": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "demonstrate": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "depict": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "achieve": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "affect": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "analyze": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "apply": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "approach": {
+        "shown": 2,
+        "correct": 2,
+        "wrong": 0
+      },
+      "argue": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "assess": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "assume": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "avoid": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "benefit": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "challenge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "compare": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "complain": {
+        "shown": 3,
+        "correct": 0,
+        "wrong": 3
+      },
+      "conclude": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "conduct": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "confirm": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "consider": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "contribute": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "create": {
+        "shown": 3,
+        "correct": 1,
+        "wrong": 2
+      },
+      "decide": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "define": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "demand": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "depend": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "develop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "discuss": {
+        "shown": 2,
+        "correct": 2,
+        "wrong": 0
+      },
+      "effect": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "evidence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "exist": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "expect": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "experience": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "explain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "express": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "improve": {
+        "shown": 2,
+        "correct": 1,
+        "wrong": 1
+      },
+      "increase": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "influence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "maintain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "manage": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "occur": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "perform": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prevent": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "provide": {
+        "shown": 4,
+        "correct": 1,
+        "wrong": 3
+      },
+      "realize": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "reduce": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "require": {
+        "shown": 3,
+        "correct": 2,
+        "wrong": 1
+      },
+      "respond": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "result": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "suggest": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "support": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      }
+    }
+  },
+  "449856263": {
+    "games_played": 2,
+    "wins": 0,
+    "losses": 1,
+    "stopped_games": 1,
+    "best_score": 15,
+    "last_score": 15,
+    "total_correct": 15,
+    "total_wrong": 1,
+    "language": "en",
+    "english_level": "",
+    "reminders_enabled": true,
+    "reminder_time": "18:00",
+    "last_seen_date": "2026-03-29",
+    "last_reminder_date": "",
+    "chat_id": 449856263,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {
+      "1": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "2": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "3": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "4": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      }
+    },
+    "word_stats": {
+      "Busy": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Same": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Sure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "careful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "unsure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "unclear": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hall": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Sunset": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Storage": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Lake": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Weather": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Gym": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Floor": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Clothes": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "break": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "plate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "aunt": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "want": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "neck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bat": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Fork": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "spoon": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bowl": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Pot": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Frying pan": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Glass": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Cup": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "rain": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "bug": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "defect": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "feature": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Source code": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Runtime": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Framework": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Library": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "API": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Database": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Backend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frontend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Version Control": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "algorithm": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Data structure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "data": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "release": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user interface": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user experience": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "object": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Inheritance": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Encapsulation": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Polymorphism": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Attribute": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Method": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "base class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "parent class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "derived class": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "child class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hardware": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "loop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Open-source": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Statement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Syntax": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Update": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Motherboard": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Processor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Memory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hard disk drive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Solid-state drive": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "Power supply unit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Monitor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Community": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mood": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "offer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "piece": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Preparation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "application form": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "direction": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "adjective": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "preposition": {
+        "shown": 1,
+        "correct": 0,
+        "wrong": 1
+      },
+      "adverb": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "noun": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dormitory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "undergraduate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "briefing": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "improvements": {
+        "shown": 1,
+        "correct": 1,
+        "wrong": 0
+      },
+      "solution": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "replacement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "behaviour": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "things": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Growth": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "conditions": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Adamant": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pan": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "1017165019": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "one by one": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "see you later": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "rush": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "weak": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "lucky for me": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "spoil": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "simply can not stand": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bright side": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "switched": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "visible": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "raise": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dressing": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "garlic": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "grapes": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "still": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sparkling": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cheapest": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "suitcase": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "allowed": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fully": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "charged": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "stuck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "running on vibes": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hide": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "exactly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "alarm": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bellyache": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "object": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "for a bit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "amenities": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "similar": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "1202535869": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "basic": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "example": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "teacher": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "lesson": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "practice": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "1983334240": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "Busy": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Same": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Sure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "careful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "unsure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "unclear": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hall": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Sunset": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Storage": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Lake": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Weather": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Gym": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Floor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Clothes": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "break": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "plate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "aunt": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "want": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "neck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bat": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Fork": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "spoon": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bowl": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Pot": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frying pan": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Glass": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Cup": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "rain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "defect": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "feature": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Source code": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Runtime": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Framework": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Library": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "API": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Database": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Backend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frontend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Version Control": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "algorithm": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Data structure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "data": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "release": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user interface": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user experience": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "object": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Inheritance": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Encapsulation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Polymorphism": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Attribute": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Method": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "base class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "parent class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "derived class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "child class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hardware": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "loop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Open-source": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Statement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Syntax": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Update": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Motherboard": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Processor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Memory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hard disk drive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Solid-state drive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Power supply unit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Monitor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Community": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mood": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "offer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "piece": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Preparation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "application form": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "direction": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "adjective": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "preposition": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "adverb": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "noun": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dormitory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "undergraduate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "briefing": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "improvements": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "solution": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "replacement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "behaviour": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "things": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Growth": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "conditions": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "243869308": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "Hall": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Sunset": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Storage": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Lake": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Weather": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Gym": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Floor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Clothes": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "break": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "plate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "aunt": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "want": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "neck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bat": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Fork": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "spoon": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bowl": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Pot": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frying pan": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Glass": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Cup": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "rain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "defect": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "feature": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Source code": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Runtime": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Framework": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Library": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "API": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Database": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Backend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frontend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Version Control": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "algorithm": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Data structure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "data": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "release": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user interface": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user experience": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "object": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Inheritance": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Encapsulation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Polymorphism": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Attribute": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Method": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hardware": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "loop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Open-source": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Syntax": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Update": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Motherboard": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Processor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Memory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Monitor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "391246274": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "able": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "huge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wily": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "similar": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "difficult": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "recognizable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "successful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sensitive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dead end": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "chalk": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "quarry": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "reservoir": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "navigator/helmsman": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "renovation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tap": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "move/moving": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "divorce": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "swearing": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "competitors/ oponents": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prepositions": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "trust": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "try": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tank": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pavement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hole": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pocket": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cave": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "government": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "opportunity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "description": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "jail": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "turn": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "permission": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cracks": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "desire": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "coin": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "roof": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "can": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "background": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "couple": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "interpreter": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "topic": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "explosion": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "selection": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "salary": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "advertising": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decision": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "keep": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "move": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "avoid": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bother": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "creep": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "get out of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ride": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "became": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "drop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "throw": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cross": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "realize": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "allow": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "get stuck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "invite": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "create": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "receive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "remind": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "stare": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decide": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "gargle": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "accept": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prescribe": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "run after": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "just": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hardly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "suddenly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "not enough": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "according to": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "аlso": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "almost": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "during": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "on till": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everybody": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everyone": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "same of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "that's it": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "409328214": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {
+      "1": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "2": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "3": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      },
+      "4": {
+        "games_played": 0,
+        "wins": 0,
+        "losses": 0,
+        "stopped_games": 0,
+        "correct_answers": 0,
+        "wrong_answers": 0,
+        "best_score": 0
+      }
+    },
+    "word_stats": {
+      "able": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "huge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wily": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "similar": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "difficult": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "recognizable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "successful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sensitive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dead end": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "chalk": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "quarry": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "reservoir": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "navigator/helmsman": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "renovation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tap": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "move/moving": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "divorce": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "swearing": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "competitors/ oponents": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prepositions": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "trust": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "try": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tank": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pavement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hole": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pocket": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cave": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "government": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "opportunity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "description": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "jail": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "turn": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "permission": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cracks": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "desire": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "coin": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "roof": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "can": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "background": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "couple": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "interpreter": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "topic": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "explosion": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "selection": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "salary": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "advertising": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decision": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "keep": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "move": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "avoid": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bother": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "creep": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "get out of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ride": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "became": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "drop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "throw": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cross": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "realize": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "allow": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "get stuck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "invite": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "create": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "receive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "remind": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "stare": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decide": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "gargle": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "accept": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prescribe": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "run after": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "just": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hardly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "suddenly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "not enough": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "according to": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "аlso": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "almost": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "during": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "on till": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everybody": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everyone": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "same of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "that's it": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "452869619": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "typical": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tinned": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "brewed": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fastidious": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "substantial": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "particular": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "suggestion": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "self evaluation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "charity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wealthy": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "reward": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "enormous": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "essential": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "filling": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "peas": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "occupation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "counsel": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tycoon": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "worth": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "commodity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "confidence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "acquisition": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "season": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "derive from": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "exist": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "gather": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "be fond of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pour": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "gain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "raise": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "rise": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "arrange": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "earn": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "crawl": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "definitely": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "strictly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "vice versa": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "surprisingly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "plenty": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "accurately": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "issue": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tray": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "setting": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "field": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pursue": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "perfomance": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dormitory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "condition": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "5044519249": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "Hall": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Sunset": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Storage": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Lake": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Weather": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Gym": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Floor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Clothes": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "break": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "plate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "aunt": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "want": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "neck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bat": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Fork": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "spoon": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bowl": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Pot": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frying pan": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Glass": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Cup": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "rain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "defect": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "feature": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Source code": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Runtime": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Framework": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Library": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "API": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Database": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Backend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Frontend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Version Control": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "algorithm": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Data structure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "data": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "release": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user interface": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "user experience": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "class": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "object": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Inheritance": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Encapsulation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Polymorphism": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Attribute": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Method": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Hardware": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "loop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Open-source": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Statement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Syntax": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Update": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Motherboard": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Processor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Memory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Monitor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Community": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mood": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "offer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "piece": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Preparation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "direction": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "adjective": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "preposition": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "adverb": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "noun": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dormitory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "undergraduate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "solution": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "replacement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "conditions": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Need": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Arrive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "call": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Walk": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Stay": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wash": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wait": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "debug": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "compile": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Implement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "deploy": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "test": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "verify": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "optimize": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "integrate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "refactor": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "commit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "push": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pull": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "merge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "output": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "query": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "borrow": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ask": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pronounce": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "attend": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "introduce": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ensure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "happen": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Now": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "often": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Usually": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Already": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "yet": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Urgent": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "here": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "there": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "later": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ASAP": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cool": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "something": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "Swimming": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "quietly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "5747894601": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "able": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "huge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wily": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "similar": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "difficult": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "recognizable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "successful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sensitive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "trust": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tank": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pavement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hole": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pocket": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "government": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "opportunity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "description": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decision": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "avoid": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "invite": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "create": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "724302317": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "able": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "huge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wily": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "similar": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "difficult": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "recognizable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "successful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sensitive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "trust": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tank": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pavement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hole": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pocket": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "government": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "opportunity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "description": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decision": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "avoid": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "invite": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "create": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "858270002": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "impudent": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "awful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "extra": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "whole": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "full": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "far": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "strange": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "upset": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "proud": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "afraid": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "responsible": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "famous": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "crowded": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "roast": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sparkling": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cheap": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "coat": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "curtain": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wedding": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "aeroplane": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "corner": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "toe": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sentence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "verb": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everything": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cupboard": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pan": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mess": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ticket": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "title": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fall": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "year": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "breath": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "earth": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "kiwi": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "drawer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "nest": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "misprint": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "lake": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hill": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "plane": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "vase": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "stair": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "carriage": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "nowadays": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "colleague": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "salary": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mistake": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "accomplishment": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "chair": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "habit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "carpet": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "oven": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "serve": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "garlic": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "beer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "steak": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "timetable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "competition": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "preparation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "project": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "departure": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "flight": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "destination": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "remark": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "boarding": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "970689250": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "warmer": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "village": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "factory": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "article": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "catch cold": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "All day long": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "still": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "1667740021": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "yet": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wedding": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "land": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  },
+  "980495663": {
+    "games_played": 0,
+    "wins": 0,
+    "losses": 0,
+    "stopped_games": 0,
+    "best_score": 0,
+    "last_score": 0,
+    "total_correct": 0,
+    "total_wrong": 0,
+    "language": "ru",
+    "english_level": "",
+    "reminders_enabled": false,
+    "reminder_time": "18:00",
+    "last_seen_date": "",
+    "last_reminder_date": "",
+    "chat_id": null,
+    "current_streak": 0,
+    "best_streak": 0,
+    "last_round_date": "",
+    "daily_goal_target": 20,
+    "daily_goal_progress": 0,
+    "daily_goal_date": "2026-04-25",
+    "level_stats": {},
+    "word_stats": {
+      "able": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "huge": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "wily": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "similar": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "difficult": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "recognizable": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "successful": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "sensitive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "dead end": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "chalk": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "quarry": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "reservoir": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "navigator/helmsman": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pit": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "renovation": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tap": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "move/moving": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "divorce": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "swearing": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "competitors/ oponents": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prepositions": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "trust": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "try": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "tank": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pavement": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hole": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "pocket": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cave": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "government": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "opportunity": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "description": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "jail": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "turn": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "permission": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cracks": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "desire": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "fence": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "coin": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "roof": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "can": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "background": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "couple": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "interpreter": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "topic": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "explosion": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "selection": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "salary": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "advertising": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decision": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "mate": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "keep": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "move": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "avoid": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "bother": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "creep": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "get out of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "ride": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "became": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "drop": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "throw": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "cross": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "realize": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "allow": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "get stuck": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "invite": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "create": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "receive": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "remind": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "stare": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "decide": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "gargle": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "accept": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "prescribe": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "run after": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "just": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "hardly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "suddenly": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "not enough": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "according to": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "аlso": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "almost": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "during": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "on till": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everybody": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "everyone": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "same of": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      },
+      "that's it": {
+        "shown": 0,
+        "correct": 0,
+        "wrong": 0
+      }
+    }
+  }
+}

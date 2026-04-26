@@ -1,0 +1,533 @@
+2026-04-25 11:54:40,658 | WARNING | vocbot | BOT token loaded from token.txt fallback. Move it to .env when convenient.
+2026-04-25 12:01:43,836 | INFO | vocbot | Bot startup completed. vocab_users=15 students=16 stats_profiles=14 cached_translations=435 cached_definitions=7
+2026-04-25 12:01:43,870 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 12:01:44,175 | INFO | aiogram.dispatcher | Run polling for bot @VocBot_origbot id=8650502659 - 'VocBot'
+2026-04-25 12:03:08,356 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 12:03:08,359 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 12:03:08,360 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8650502659)
+2026-04-25 12:03:08,625 | INFO | aiogram.dispatcher | Polling stopped for bot @VocBot_origbot id=8650502659 - 'VocBot'
+2026-04-25 12:03:25,976 | INFO | vocbot | Bot startup completed. vocab_users=15 students=16 stats_profiles=14 cached_translations=435 cached_definitions=7
+2026-04-25 12:03:25,979 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 12:03:26,132 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 12:03:26,352 | INFO | aiogram.event | Update id=487922029 is handled. Duration 155 ms by bot id=8793854586
+2026-04-25 12:03:28,723 | INFO | aiogram.event | Update id=487922030 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 12:03:31,188 | INFO | aiogram.event | Update id=487922031 is handled. Duration 687 ms by bot id=8793854586
+2026-04-25 12:03:33,363 | INFO | aiogram.event | Update id=487922032 is handled. Duration 141 ms by bot id=8793854586
+2026-04-25 12:03:40,686 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 12:03:40,687 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 12:03:40,688 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 12:03:40,952 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:09:48,224 | INFO | vocbot | SQLite database is empty. Migrating data from JSON files.
+2026-04-25 14:10:58,518 | INFO | vocbot | SQLite database is empty. Migrating data from JSON files.
+2026-04-25 14:18:47,333 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=14 cached_translations=436 cached_definitions=7
+2026-04-25 14:18:47,335 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 14:18:47,494 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:18:55,222 | INFO | aiogram.event | Update id=487922033 is handled. Duration 235 ms by bot id=8793854586
+2026-04-25 14:18:56,586 | INFO | aiogram.event | Update id=487922034 is handled. Duration 280 ms by bot id=8793854586
+2026-04-25 14:18:57,617 | INFO | aiogram.event | Update id=487922035 is handled. Duration 155 ms by bot id=8793854586
+2026-04-25 14:19:00,512 | INFO | aiogram.event | Update id=487922036 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 14:19:04,538 | INFO | aiogram.event | Update id=487922037 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 14:19:11,477 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 14:19:11,479 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 14:19:11,479 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 14:19:11,737 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:34:19,003 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 14:34:19,004 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 14:34:19,187 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:34:24,629 | INFO | aiogram.event | Update id=487922038 is handled. Duration 250 ms by bot id=8793854586
+2026-04-25 14:34:25,487 | INFO | aiogram.event | Update id=487922039 is handled. Duration 139 ms by bot id=8793854586
+2026-04-25 14:34:26,641 | INFO | aiogram.event | Update id=487922040 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 14:34:28,675 | INFO | aiogram.event | Update id=487922041 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 14:34:33,233 | INFO | aiogram.event | Update id=487922042 is handled. Duration 155 ms by bot id=8793854586
+2026-04-25 14:34:36,399 | INFO | aiogram.event | Update id=487922043 is handled. Duration 140 ms by bot id=8793854586
+2026-04-25 14:34:37,794 | INFO | aiogram.event | Update id=487922044 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 14:34:45,471 | INFO | aiogram.event | Update id=487922045 is handled. Duration 235 ms by bot id=8793854586
+2026-04-25 14:34:46,746 | INFO | aiogram.event | Update id=487922046 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 14:34:48,070 | INFO | aiogram.event | Update id=487922047 is handled. Duration 93 ms by bot id=8793854586
+2026-04-25 14:34:49,358 | INFO | aiogram.event | Update id=487922048 is handled. Duration 139 ms by bot id=8793854586
+2026-04-25 14:34:51,809 | INFO | aiogram.event | Update id=487922049 is handled. Duration 172 ms by bot id=8793854586
+2026-04-25 14:34:59,972 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 14:34:59,973 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 14:34:59,974 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 14:35:00,229 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:41:32,987 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 14:41:32,987 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 14:41:33,120 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:41:42,809 | INFO | aiogram.event | Update id=487922050 is handled. Duration 3437 ms by bot id=8793854586
+2026-04-25 14:41:44,420 | INFO | aiogram.event | Update id=487922051 is handled. Duration 141 ms by bot id=8793854586
+2026-04-25 14:42:01,567 | INFO | aiogram.event | Update id=487922052 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 14:42:03,715 | INFO | aiogram.event | Update id=487922053 is handled. Duration 141 ms by bot id=8793854586
+2026-04-25 14:42:07,510 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 14:42:07,514 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 14:42:07,516 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 14:42:07,774 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:50:58,948 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 14:50:59,043 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 14:50:59,313 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 14:51:02,251 | INFO | aiogram.event | Update id=487922054 is handled. Duration 234 ms by bot id=8793854586
+2026-04-25 14:51:03,425 | INFO | aiogram.event | Update id=487922055 is handled. Duration 172 ms by bot id=8793854586
+2026-04-25 14:51:15,817 | INFO | aiogram.event | Update id=487922056 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 14:51:16,866 | INFO | aiogram.event | Update id=487922057 is handled. Duration 155 ms by bot id=8793854586
+2026-04-25 14:51:17,542 | INFO | aiogram.event | Update id=487922058 is handled. Duration 250 ms by bot id=8793854586
+2026-04-25 14:51:28,309 | INFO | aiogram.event | Update id=487922059 is handled. Duration 203 ms by bot id=8793854586
+2026-04-25 14:51:30,335 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 14:51:30,338 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 14:51:30,338 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 14:51:30,603 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 15:09:03,276 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 15:09:03,277 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 15:09:03,408 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 15:09:08,922 | INFO | aiogram.event | Update id=487922060 is handled. Duration 202 ms by bot id=8793854586
+2026-04-25 15:09:12,818 | INFO | aiogram.event | Update id=487922061 is handled. Duration 109 ms by bot id=8793854586
+2026-04-25 15:09:15,521 | INFO | aiogram.event | Update id=487922062 is handled. Duration 140 ms by bot id=8793854586
+2026-04-25 15:09:29,558 | INFO | aiogram.event | Update id=487922063 is handled. Duration 250 ms by bot id=8793854586
+2026-04-25 15:09:33,655 | INFO | aiogram.event | Update id=487922064 is handled. Duration 405 ms by bot id=8793854586
+2026-04-25 15:09:36,149 | INFO | aiogram.event | Update id=487922065 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 15:09:37,652 | INFO | aiogram.event | Update id=487922066 is handled. Duration 172 ms by bot id=8793854586
+2026-04-25 15:09:48,629 | INFO | aiogram.event | Update id=487922067 is handled. Duration 77 ms by bot id=8793854586
+2026-04-25 15:09:55,396 | INFO | aiogram.event | Update id=487922068 is handled. Duration 109 ms by bot id=8793854586
+2026-04-25 15:10:01,148 | INFO | aiogram.event | Update id=487922069 is handled. Duration 93 ms by bot id=8793854586
+2026-04-25 15:10:03,019 | INFO | aiogram.event | Update id=487922070 is not handled. Duration 77 ms by bot id=8793854586
+2026-04-25 15:10:03,019 | ERROR | aiogram.event | Cause exception while process update id=487922070 by bot id=8793854586
+ValueError: not enough values to unpack (expected 5, got 4)
+Traceback (most recent call last):
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\main.py", line 1447, in admin_student_vocab
+    _, _, _, student_id, page_text = callback.data.split(":", maxsplit=4)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+2026-04-25 15:10:07,915 | INFO | aiogram.event | Update id=487922071 is not handled. Duration 61 ms by bot id=8793854586
+2026-04-25 15:10:07,923 | ERROR | aiogram.event | Cause exception while process update id=487922071 by bot id=8793854586
+ValueError: not enough values to unpack (expected 5, got 4)
+Traceback (most recent call last):
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\main.py", line 1447, in admin_student_vocab
+    _, _, _, student_id, page_text = callback.data.split(":", maxsplit=4)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+2026-04-25 15:10:10,092 | INFO | aiogram.event | Update id=487922072 is handled. Duration 141 ms by bot id=8793854586
+2026-04-25 15:10:15,899 | INFO | aiogram.event | Update id=487922073 is not handled. Duration 93 ms by bot id=8793854586
+2026-04-25 15:10:15,901 | ERROR | aiogram.event | Cause exception while process update id=487922073 by bot id=8793854586
+ValueError: not enough values to unpack (expected 5, got 4)
+Traceback (most recent call last):
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\main.py", line 1447, in admin_student_vocab
+    _, _, _, student_id, page_text = callback.data.split(":", maxsplit=4)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+2026-04-25 15:10:34,963 | INFO | aiogram.event | Update id=487922074 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 15:10:37,580 | INFO | aiogram.event | Update id=487922075 is handled. Duration 94 ms by bot id=8793854586
+2026-04-25 15:10:38,956 | INFO | aiogram.event | Update id=487922076 is not handled. Duration 62 ms by bot id=8793854586
+2026-04-25 15:10:38,956 | ERROR | aiogram.event | Cause exception while process update id=487922076 by bot id=8793854586
+ValueError: not enough values to unpack (expected 5, got 4)
+Traceback (most recent call last):
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\main.py", line 1447, in admin_student_vocab
+    _, _, _, student_id, page_text = callback.data.split(":", maxsplit=4)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+2026-04-25 15:10:50,439 | INFO | aiogram.event | Update id=487922077 is not handled. Duration 62 ms by bot id=8793854586
+2026-04-25 15:10:50,439 | ERROR | aiogram.event | Cause exception while process update id=487922077 by bot id=8793854586
+ValueError: not enough values to unpack (expected 5, got 4)
+Traceback (most recent call last):
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\main.py", line 1447, in admin_student_vocab
+    _, _, _, student_id, page_text = callback.data.split(":", maxsplit=4)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+2026-04-25 15:10:51,354 | INFO | aiogram.event | Update id=487922078 is handled. Duration 139 ms by bot id=8793854586
+2026-04-25 15:10:53,716 | INFO | aiogram.event | Update id=487922079 is handled. Duration 203 ms by bot id=8793854586
+2026-04-25 15:10:55,615 | INFO | aiogram.event | Update id=487922080 is handled. Duration 202 ms by bot id=8793854586
+2026-04-25 15:11:00,581 | INFO | aiogram.event | Update id=487922081 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 15:11:12,600 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 15:11:12,603 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 15:11:12,608 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 15:11:12,875 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 22:58:37,193 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 22:58:37,194 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 22:58:37,358 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 22:58:37,499 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 22:58:52,443 | INFO | aiogram.event | Update id=487922082 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 22:58:54,400 | INFO | aiogram.event | Update id=487922083 is handled. Duration 297 ms by bot id=8793854586
+2026-04-25 22:58:57,345 | INFO | aiogram.event | Update id=487922084 is handled. Duration 140 ms by bot id=8793854586
+2026-04-25 22:59:00,047 | INFO | aiogram.event | Update id=487922085 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 22:59:01,681 | INFO | aiogram.event | Update id=487922086 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 22:59:06,380 | INFO | aiogram.event | Update id=487922087 is handled. Duration 140 ms by bot id=8793854586
+2026-04-25 22:59:16,134 | INFO | aiogram.event | Update id=487922088 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 22:59:18,872 | INFO | aiogram.event | Update id=487922089 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 22:59:37,556 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:00:37,644 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:01:37,748 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:02:37,878 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:03:38,004 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:04:38,121 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:05:38,201 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:05:58,823 | INFO | aiogram.event | Update id=487922090 is handled. Duration 172 ms by bot id=8793854586
+2026-04-25 23:06:00,339 | INFO | aiogram.event | Update id=487922091 is handled. Duration 296 ms by bot id=8793854586
+2026-04-25 23:06:03,218 | INFO | aiogram.event | Update id=487922092 is handled. Duration 140 ms by bot id=8793854586
+2026-04-25 23:06:24,061 | INFO | aiogram.event | Update id=487922093 is handled. Duration 155 ms by bot id=8793854586
+2026-04-25 23:06:25,432 | INFO | aiogram.event | Update id=487922094 is handled. Duration 155 ms by bot id=8793854586
+2026-04-25 23:06:28,364 | INFO | aiogram.event | Update id=487922095 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 23:06:31,091 | INFO | aiogram.event | Update id=487922096 is handled. Duration 202 ms by bot id=8793854586
+2026-04-25 23:06:32,155 | INFO | aiogram.event | Update id=487922097 is handled. Duration 265 ms by bot id=8793854586
+2026-04-25 23:06:33,543 | INFO | aiogram.event | Update id=487922098 is handled. Duration 188 ms by bot id=8793854586
+2026-04-25 23:06:35,047 | INFO | aiogram.event | Update id=487922099 is handled. Duration 422 ms by bot id=8793854586
+2026-04-25 23:06:38,598 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:07:27,058 | INFO | aiogram.event | Update id=487922100 is handled. Duration 139 ms by bot id=8793854586
+2026-04-25 23:07:38,674 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:08:36,474 | INFO | aiogram.event | Update id=487922101 is handled. Duration 202 ms by bot id=8793854586
+2026-04-25 23:08:38,983 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:09:39,051 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:10:39,205 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:11:39,304 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:12:39,380 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:13:39,574 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:14:39,650 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:14:41,401 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 23:14:41,407 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 23:14:41,413 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 23:14:41,683 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 23:24:25,031 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 23:24:25,032 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 23:24:25,186 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 23:24:25,208 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:24:30,177 | INFO | aiogram.event | Update id=487922102 is handled. Duration 264 ms by bot id=8793854586
+2026-04-25 23:24:31,675 | INFO | aiogram.event | Update id=487922103 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 23:24:34,357 | INFO | aiogram.event | Update id=487922104 is handled. Duration 125 ms by bot id=8793854586
+2026-04-25 23:24:38,389 | INFO | aiogram.event | Update id=487922105 is handled. Duration 437 ms by bot id=8793854586
+2026-04-25 23:24:50,516 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 23:24:50,520 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 23:24:50,522 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 23:24:50,780 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 23:30:44,881 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-25 23:30:44,882 | INFO | aiogram.dispatcher | Start polling
+2026-04-25 23:30:45,042 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-25 23:30:45,071 | WARNING | vocbot | Failed to send reminder to 449856263: Telegram server says - Bad Request: chat not found
+2026-04-25 23:30:49,468 | INFO | aiogram.event | Update id=487922106 is handled. Duration 140 ms by bot id=8793854586
+2026-04-25 23:30:52,009 | INFO | aiogram.event | Update id=487922107 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 23:30:52,988 | INFO | aiogram.event | Update id=487922108 is handled. Duration 188 ms by bot id=8793854586
+2026-04-25 23:30:57,233 | INFO | aiogram.event | Update id=487922109 is handled. Duration 297 ms by bot id=8793854586
+2026-04-25 23:30:58,252 | INFO | aiogram.event | Update id=487922110 is handled. Duration 219 ms by bot id=8793854586
+2026-04-25 23:30:59,633 | INFO | aiogram.event | Update id=487922111 is handled. Duration 437 ms by bot id=8793854586
+2026-04-25 23:31:03,748 | INFO | aiogram.event | Update id=487922112 is handled. Duration 438 ms by bot id=8793854586
+2026-04-25 23:31:04,739 | INFO | aiogram.event | Update id=487922113 is handled. Duration 156 ms by bot id=8793854586
+2026-04-25 23:31:38,208 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-25 23:31:38,210 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-25 23:31:38,211 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-25 23:31:38,478 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-26 06:55:47,715 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-26 06:55:47,722 | INFO | aiogram.dispatcher | Start polling
+2026-04-26 06:55:48,015 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-26 06:57:03,785 | INFO | aiogram.event | Update id=487922114 is handled. Duration 188 ms by bot id=8793854586
+2026-04-26 06:57:18,065 | INFO | aiogram.event | Update id=487922115 is handled. Duration 530 ms by bot id=8793854586
+2026-04-26 06:57:23,584 | INFO | aiogram.event | Update id=487922116 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 06:57:25,258 | INFO | aiogram.event | Update id=487922117 is handled. Duration 250 ms by bot id=8793854586
+2026-04-26 06:57:28,139 | INFO | aiogram.event | Update id=487922118 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 06:57:31,042 | INFO | aiogram.event | Update id=487922119 is handled. Duration 141 ms by bot id=8793854586
+2026-04-26 06:57:34,153 | INFO | aiogram.event | Update id=487922120 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 06:58:41,689 | INFO | aiogram.event | Update id=487922121 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 06:58:43,067 | INFO | aiogram.event | Update id=487922122 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 06:58:48,745 | INFO | aiogram.event | Update id=487922123 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 06:59:38,704 | INFO | aiogram.event | Update id=487922124 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 06:59:43,376 | INFO | aiogram.event | Update id=487922125 is handled. Duration 109 ms by bot id=8793854586
+2026-04-26 06:59:45,745 | INFO | aiogram.event | Update id=487922126 is handled. Duration 109 ms by bot id=8793854586
+2026-04-26 06:59:57,846 | INFO | aiogram.event | Update id=487922127 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:00:41,031 | INFO | aiogram.event | Update id=487922128 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:02:52,670 | INFO | aiogram.event | Update id=487922129 is handled. Duration 156 ms by bot id=8793854586
+2026-04-26 07:03:03,438 | INFO | aiogram.event | Update id=487922130 is handled. Duration 514 ms by bot id=8793854586
+2026-04-26 07:04:45,065 | INFO | aiogram.event | Update id=487922131 is handled. Duration 233 ms by bot id=8793854586
+2026-04-26 07:06:34,625 | INFO | aiogram.event | Update id=487922132 is handled. Duration 141 ms by bot id=8793854586
+2026-04-26 07:06:37,704 | INFO | aiogram.event | Update id=487922133 is handled. Duration 375 ms by bot id=8793854586
+2026-04-26 07:06:39,592 | INFO | aiogram.event | Update id=487922134 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:06:42,270 | INFO | aiogram.event | Update id=487922135 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:06:45,429 | INFO | aiogram.event | Update id=487922136 is handled. Duration 139 ms by bot id=8793854586
+2026-04-26 07:06:47,083 | INFO | aiogram.event | Update id=487922137 is handled. Duration 327 ms by bot id=8793854586
+2026-04-26 07:07:02,516 | INFO | aiogram.event | Update id=487922138 is handled. Duration 109 ms by bot id=8793854586
+2026-04-26 07:07:03,568 | INFO | aiogram.event | Update id=487922139 is handled. Duration 172 ms by bot id=8793854586
+2026-04-26 07:07:12,858 | INFO | aiogram.event | Update id=487922140 is handled. Duration 155 ms by bot id=8793854586
+2026-04-26 07:07:14,741 | INFO | aiogram.event | Update id=487922141 is handled. Duration 109 ms by bot id=8793854586
+2026-04-26 07:07:15,114 | INFO | aiogram.event | Update id=487922142 is handled. Duration 234 ms by bot id=8793854586
+2026-04-26 07:07:19,495 | INFO | aiogram.event | Update id=487922143 is handled. Duration 219 ms by bot id=8793854586
+2026-04-26 07:07:23,887 | INFO | aiogram.event | Update id=487922144 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:07:28,812 | INFO | aiogram.event | Update id=487922145 is handled. Duration 139 ms by bot id=8793854586
+2026-04-26 07:07:37,947 | INFO | aiogram.event | Update id=487922146 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:07:42,371 | INFO | aiogram.event | Update id=487922147 is handled. Duration 172 ms by bot id=8793854586
+2026-04-26 07:08:15,208 | INFO | aiogram.event | Update id=487922148 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:09:08,702 | INFO | aiogram.event | Update id=487922149 is handled. Duration 77 ms by bot id=8793854586
+2026-04-26 07:09:19,919 | INFO | aiogram.event | Update id=487922150 is handled. Duration 141 ms by bot id=8793854586
+2026-04-26 07:09:22,503 | INFO | aiogram.event | Update id=487922151 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:09:22,857 | INFO | aiogram.event | Update id=487922152 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:09:27,259 | INFO | aiogram.event | Update id=487922153 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:09:32,687 | INFO | aiogram.event | Update id=487922154 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:09:34,882 | INFO | aiogram.event | Update id=487922155 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:09:37,136 | INFO | aiogram.event | Update id=487922156 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:09:38,431 | INFO | aiogram.event | Update id=487922157 is handled. Duration 202 ms by bot id=8793854586
+2026-04-26 07:09:42,429 | INFO | aiogram.event | Update id=487922158 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:09:44,268 | INFO | aiogram.event | Update id=487922159 is handled. Duration 219 ms by bot id=8793854586
+2026-04-26 07:09:44,679 | INFO | aiogram.event | Update id=487922160 is handled. Duration 218 ms by bot id=8793854586
+2026-04-26 07:09:56,924 | INFO | aiogram.event | Update id=487922161 is handled. Duration 141 ms by bot id=8793854586
+2026-04-26 07:10:24,528 | INFO | aiogram.event | Update id=487922162 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:10:31,737 | INFO | aiogram.event | Update id=487922163 is handled. Duration 141 ms by bot id=8793854586
+2026-04-26 07:10:34,178 | INFO | aiogram.event | Update id=487922164 is handled. Duration 186 ms by bot id=8793854586
+2026-04-26 07:10:36,019 | INFO | aiogram.event | Update id=487922165 is handled. Duration 155 ms by bot id=8793854586
+2026-04-26 07:10:52,079 | INFO | aiogram.event | Update id=487922166 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:10:56,495 | INFO | aiogram.event | Update id=487922167 is handled. Duration 77 ms by bot id=8793854586
+2026-04-26 07:13:32,020 | INFO | aiogram.event | Update id=487922168 is not handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:13:32,022 | ERROR | aiogram.event | Cause exception while process update id=487922168 by bot id=8793854586
+ValueError: not enough values to unpack (expected 5, got 4)
+Traceback (most recent call last):
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 161, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 153, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 181, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Egor\OneDrive\Рабочий стол\ЯП\Python\vocab_bot\main.py", line 2295, in admin_student_vocab
+    user_id = str(callback.from_user.id)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 5, got 4)
+2026-04-26 07:13:35,949 | INFO | aiogram.event | Update id=487922169 is handled. Duration 141 ms by bot id=8793854586
+2026-04-26 07:13:38,136 | INFO | aiogram.event | Update id=487922170 is handled. Duration 125 ms by bot id=8793854586
+2026-04-26 07:15:08,829 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-26 07:15:08,839 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-26 07:15:08,848 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-26 07:15:09,233 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-26 07:15:15,622 | INFO | vocbot | Bot startup completed from SQLite. vocab_users=15 students=16 stats_profiles=16 cached_translations=436 cached_definitions=7
+2026-04-26 07:15:15,623 | INFO | aiogram.dispatcher | Start polling
+2026-04-26 07:15:15,849 | INFO | aiogram.dispatcher | Run polling for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
+2026-04-26 07:15:31,148 | INFO | aiogram.event | Update id=487922171 is handled. Duration 250 ms by bot id=8793854586
+2026-04-26 07:15:34,594 | INFO | aiogram.event | Update id=487922172 is handled. Duration 327 ms by bot id=8793854586
+2026-04-26 07:15:37,634 | INFO | aiogram.event | Update id=487922173 is handled. Duration 155 ms by bot id=8793854586
+2026-04-26 07:15:39,372 | INFO | aiogram.event | Update id=487922174 is handled. Duration 140 ms by bot id=8793854586
+2026-04-26 07:26:47,823 | INFO | vocbot | Exporting students, vocabulary, and stats from SQLite into JSON snapshot files.
+2026-04-26 07:27:16,747 | INFO | vocbot | Exporting player stats from SQLite into tracked JSON snapshot file.
+2026-04-26 07:27:57,425 | INFO | vocbot | Exporting player stats from SQLite into tracked JSON snapshot file.
+2026-04-26 07:27:57,467 | WARNING | vocbot | Atomic replace failed for game_stats.json. Falling back to direct write, likely due to a file lock.
+2026-04-26 07:27:57,484 | WARNING | vocbot | Could not remove temporary file game_stats.json.tmp because it is locked.
+2026-04-26 08:09:48,913 | INFO | aiogram.dispatcher | Polling stopped
+2026-04-26 08:09:48,956 | ERROR | aiogram.dispatcher | Failed to fetch updates - TelegramNetworkError: HTTP Client says - ServerDisconnectedError: Server disconnected
+2026-04-26 08:09:48,959 | WARNING | aiogram.dispatcher | Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8793854586)
+2026-04-26 08:09:49,226 | INFO | aiogram.dispatcher | Polling stopped for bot @testVoc3212bot id=8793854586 - 'TestVocBot'
