@@ -17,7 +17,7 @@ from app.config.bot_config import (
     logger,
 )
 from app.resources.bot_resources import ADMIN_IDS, SUCCESS_QUOTES, WRITING_TOPICS
-from app.storage.json_store import load_json as load_json_file, save_json as save_json_file
+from app.storage.json_store import load_json as load_json_file
 from app.services.lexicon_service import (
     build_distractors as build_distractors_service,
     choose_next_word as choose_next_word_service,
@@ -32,13 +32,11 @@ from app.storage.sqlite_store import (
     create_writing_task,
     create_writing_topic_request,
     expire_due_writings,
-    export_runtime_snapshot_to_json,
     get_writing_task,
     initialize_database,
     list_writing_tasks_for_user,
     load_runtime_state,
     migrate_json_to_database,
-    refresh_reference_data_from_json,
     review_writing_task,
     sync_dataset,
     submit_writing_topic_response,
@@ -75,15 +73,13 @@ sessions = {}
 definition_service_available = True
 
 
-# Сохраняет JSON как резервную копию и одновременно синхронизирует
-# соответствующий набор данных в SQLite, который теперь является
-# основным рабочим хранилищем приложения.
+# Сохраняет рабочие данные только в SQLite. Имя оставлено прежним, потому что
+# сервисные функции уже принимают этот callback как "save_json".
 def save_json(path, data) -> None:
-    save_json_file(path, data)
     sync_dataset(path, data)
 
 
-# Загружает JSON только как резервный источник для миграции и служебных сценариев.
+# JSON загружается только как legacy-источник при первом создании пустой SQLite-базы.
 TEXTS = {
     "ru": {
         "main_menu_greeting": "Привет, {name}.\n\nЭтот бот помогает тренировать слова из твоего списка.",
@@ -3359,7 +3355,6 @@ async def main():
 
     initialize_database()
     migrate_json_to_database(load_json_file)
-    refresh_reference_data_from_json(load_json_file)
     student_words, students, stats_store, translation_cache, definition_cache = load_runtime_state()
     raw_definition_cache = dict(definition_cache)
     definition_cache = {
@@ -3369,7 +3364,6 @@ async def main():
     }
     if definition_cache != raw_definition_cache:
         save_json(DEFINITIONS_FILE, definition_cache)
-    export_runtime_snapshot_to_json(save_json_file)
     definition_service_available = True
     logger.info(
         "Bot startup completed from SQLite. vocab_users=%s students=%s stats_profiles=%s cached_translations=%s cached_definitions=%s",
