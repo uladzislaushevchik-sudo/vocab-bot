@@ -30,6 +30,7 @@ from app.storage.sqlite_store import (
     count_active_writings_for_sender,
     count_writing_tasks_for_user,
     create_writing_task,
+    create_writing_topic_request,
     expire_due_writings,
     export_runtime_snapshot_to_json,
     get_writing_task,
@@ -40,6 +41,7 @@ from app.storage.sqlite_store import (
     refresh_reference_data_from_json,
     review_writing_task,
     sync_dataset,
+    submit_writing_topic_response,
 )
 from app.services.user_data import (
     add_words_to_student as add_words_to_student_data,
@@ -326,6 +328,7 @@ def writing_selected_text(user_id: str, target_user_id: str) -> str:
 def writing_task_status_label(status: str, ui_language: str) -> str:
     labels = {
         "sent": "sent" if ui_language == "en" else "отправлено",
+        "topic_sent": "topic sent" if ui_language == "en" else "тема отправлена",
         "reviewed": "reviewed" if ui_language == "en" else "проверено",
         "expired": "expired" if ui_language == "en" else "истекло",
     }
@@ -395,6 +398,24 @@ def writing_text_prompt_text(user_id: str, topic: str) -> str:
     )
 
 
+def writing_topic_request_prompt_text(user_id: str, topic: str) -> str:
+    level = get_english_level(user_id)
+    min_sentences = required_sentences_for_level(level)
+    if get_language(user_id) == "ru":
+        return (
+            "Тебе отправили тему для письма.\n\n"
+            f"Тема: {topic}\n\n"
+            f"Напиши текст на английском.\n"
+            f"Для уровня {level} нужно минимум {min_sentences} предложений."
+        )
+    return (
+        "You received a topic for a writing task.\n\n"
+        f"Topic: {topic}\n\n"
+        f"Write your text in English.\n"
+        f"For level {level} you need at least {min_sentences} sentences."
+    )
+
+
 def writing_topic_mode_text(user_id: str, target_user_id: str) -> str:
     target_name = display_user_name(target_user_id)
     if get_language(user_id) == "ru":
@@ -423,6 +444,14 @@ def writing_topic_band_label(band: str, ui_language: str) -> str:
     return mapping.get(band, band.upper())
 
 
+def writing_topic_band_for_level(level: str) -> str:
+    if level in {"A1", "A2"}:
+        return "a"
+    if level in {"B1", "B2"}:
+        return "b"
+    return "c"
+
+
 def writing_topic_suggestions_text(user_id: str, band: str, topics: list[str]) -> str:
     band_label = writing_topic_band_label(band, get_language(user_id))
     lines = [f"Topics {band_label}" if get_language(user_id) == "en" else f"Темы {band_label}", ""]
@@ -435,6 +464,20 @@ def writing_topic_suggestions_text(user_id: str, band: str, topics: list[str]) -
 
 def writing_task_text(viewer_id: str, task: dict) -> str:
     sender_name = display_user_name(task["sender_id"])
+    if task["status"] == "topic_sent":
+        if get_language(viewer_id) == "ru":
+            return (
+                "Тема для письма\n\n"
+                f"Отправитель: {sender_name}\n"
+                f"Тема: {task['topic']}\n\n"
+                "Нужно написать письмо на эту тему."
+            )
+        return (
+            "Writing topic\n\n"
+            f"Sent by: {sender_name}\n"
+            f"Topic: {task['topic']}\n\n"
+            "Write a text on this topic."
+        )
     if get_language(viewer_id) == "ru":
         return (
             "Новое письменное задание\n\n"
@@ -503,10 +546,10 @@ def writing_task_details_text(user_id: str, task: dict) -> str:
                 f"Получатель: {receiver_name} ({task['receiver_level']})",
                 f"Тема: {task['topic']}",
                 f"Статус: {status_label}",
-                "",
-                f"Оригинальный текст:\n{task['text_original']}",
             ]
         )
+        if task.get("text_original"):
+            lines.extend(["", f"Оригинальный текст:\n{task['text_original']}"])
         if task.get("text_corrected"):
             lines.extend(["", f"Исправленный текст:\n{task['text_corrected']}"])
         if task.get("reviewer_comment"):
@@ -520,10 +563,10 @@ def writing_task_details_text(user_id: str, task: dict) -> str:
                 f"Receiver: {receiver_name} ({task['receiver_level']})",
                 f"Topic: {task['topic']}",
                 f"Status: {status_label}",
-                "",
-                f"Original text:\n{task['text_original']}",
             ]
         )
+        if task.get("text_original"):
+            lines.extend(["", f"Original text:\n{task['text_original']}"])
         if task.get("text_corrected"):
             lines.extend(["", f"Corrected text:\n{task['text_corrected']}"])
         if task.get("reviewer_comment"):
@@ -830,14 +873,17 @@ def build_writing_menu_kb(user_id: str) -> InlineKeyboardMarkup:
 
 def build_writing_confirm_kb(user_id: str) -> InlineKeyboardMarkup:
     if get_language(user_id) == "ru":
-        confirm_label = "Подтвердить"
+        own_text_label = "Написать письмо самому"
+        topic_request_label = "Отправить только тему"
         change_label = "Выбрать другого"
     else:
-        confirm_label = "Confirm"
+        own_text_label = "Write my own text"
+        topic_request_label = "Send topic only"
         change_label = "Change user"
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text=confirm_label, callback_data="writing:confirm")],
+            [InlineKeyboardButton(text=own_text_label, callback_data="writing:mode:self")],
+            [InlineKeyboardButton(text=topic_request_label, callback_data="writing:mode:request")],
             [InlineKeyboardButton(text=change_label, callback_data="writing:change")],
             [InlineKeyboardButton(text="К Writing Exchange" if get_language(user_id) == "ru" else "Back to Writing Exchange", callback_data="menu:writing")],
         ]
@@ -898,6 +944,16 @@ def build_writing_task_kb(user_id: str, task_id: int) -> InlineKeyboardMarkup:
         inline_keyboard=[
             [InlineKeyboardButton(text=correct_label, callback_data=f"writing:correct:{task_id}")],
             [InlineKeyboardButton(text=no_mistakes_label, callback_data=f"writing:no_mistakes:{task_id}")],
+            [InlineKeyboardButton(text="К Writing Exchange" if get_language(user_id) == "ru" else "Back to Writing Exchange", callback_data="menu:writing")],
+        ]
+    )
+
+
+def build_writing_topic_response_kb(user_id: str, task_id: int) -> InlineKeyboardMarkup:
+    write_label = "Написать письмо" if get_language(user_id) == "ru" else "Write text"
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text=write_label, callback_data=f"writing:respond_topic:{task_id}")],
             [InlineKeyboardButton(text="К Writing Exchange" if get_language(user_id) == "ru" else "Back to Writing Exchange", callback_data="menu:writing")],
         ]
     )
@@ -1441,8 +1497,10 @@ def ensure_session(user_id: str) -> dict:
             "admin_target_student_id": None,
             "awaiting_writing_topic": False,
             "awaiting_writing_text": False,
+            "awaiting_writing_topic_response": False,
             "awaiting_writing_correction": False,
             "awaiting_writing_no_mistakes_comment": False,
+            "writing_flow_mode": "self",
             "writing_target_user_id": None,
             "writing_topic": "",
             "writing_task_id": None,
@@ -1463,8 +1521,10 @@ def reset_admin_flow(session: dict) -> None:
 def reset_writing_flow(session: dict) -> None:
     session["awaiting_writing_topic"] = False
     session["awaiting_writing_text"] = False
+    session["awaiting_writing_topic_response"] = False
     session["awaiting_writing_correction"] = False
     session["awaiting_writing_no_mistakes_comment"] = False
+    session["writing_flow_mode"] = "self"
     session["writing_target_user_id"] = None
     session["writing_topic"] = ""
     session["writing_task_id"] = None
@@ -1711,6 +1771,82 @@ async def send_main_menu(message: Message, user_id: str) -> None:
         t(user_id, "main_menu_greeting", name=student_name),
         reply_markup=build_main_menu_kb(user_id),
     )
+
+
+async def send_writing_topic_request(callback: CallbackQuery, user_id: str, topic: str) -> None:
+    session = ensure_session(user_id)
+    target_user_id = session.get("writing_target_user_id")
+    if not target_user_id or target_user_id == user_id:
+        reset_writing_flow(session)
+        await respond_to_callback(
+            callback,
+            "Не удалось определить получателя. Выбери собеседника заново."
+            if get_language(user_id) == "ru"
+            else "Could not determine the receiver. Please choose a partner again.",
+            reply_markup=build_main_menu_kb(user_id),
+        )
+        return
+
+    requester_level = get_english_level(user_id)
+    target_profile = get_user_profile(target_user_id)
+    writer_level = target_profile.get("english_level", "")
+    if writer_level not in ENGLISH_LEVELS or not target_profile.get("chat_id"):
+        reset_writing_flow(session)
+        await respond_to_callback(
+            callback,
+            "Этот собеседник сейчас недоступен. Выбери другого."
+            if get_language(user_id) == "ru"
+            else "This partner is unavailable right now. Please choose another one.",
+            reply_markup=build_main_menu_kb(user_id),
+        )
+        return
+
+    task_id = create_writing_topic_request(
+        user_id,
+        target_user_id,
+        requester_level,
+        writer_level,
+        topic,
+    )
+    reset_writing_flow(session)
+    await respond_to_callback(
+        callback,
+        "Тема отправлена. Теперь собеседник напишет письмо, а ты сможешь его проверить."
+        if get_language(user_id) == "ru"
+        else "The topic has been sent. Your partner will write the text, then you will be able to review it.",
+        reply_markup=build_main_menu_kb(user_id),
+    )
+
+    try:
+        sender_name = display_user_name(user_id)
+        if get_language(target_user_id) == "ru":
+            receiver_text = (
+                f"{sender_name} отправил тебе тему для письма.\n\n"
+                f"Тема: {topic}\n"
+                f"Уровень темы: {writer_level}"
+            )
+        else:
+            receiver_text = (
+                f"{sender_name} sent you a writing topic.\n\n"
+                f"Topic: {topic}\n"
+                f"Topic level: {writer_level}"
+            )
+        await bot.send_message(
+            target_profile["chat_id"],
+            receiver_text,
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[
+                    [
+                        InlineKeyboardButton(
+                            text="Написать письмо" if get_language(target_user_id) == "ru" else "Write text",
+                            callback_data=f"writing:respond_topic:{task_id}",
+                        )
+                    ]
+                ]
+            ),
+        )
+    except Exception as exc:
+        logger.warning("Could not notify writing topic receiver %s: %s", target_user_id, exc)
 
 
 # �-ап�fскае�, нов�<й �?а�fнд: сб�?ас�<вае�, сесси�Z, в�<би�?ае�, пе�?вое слово и показ�<вае�, воп�?ос.
@@ -2034,6 +2170,51 @@ async def writing_confirm_user(callback: CallbackQuery):
             reply_markup=build_writing_candidates_kb(user_id, 0),
         )
         return
+    session["writing_flow_mode"] = "self"
+    await respond_to_callback(
+        callback,
+        writing_topic_mode_text(user_id, target_user_id),
+        reply_markup=build_writing_topic_mode_kb(user_id),
+    )
+
+
+@dp.callback_query(F.data == "writing:mode:self")
+async def writing_mode_self(callback: CallbackQuery):
+    await callback.answer()
+    user_id = str(callback.from_user.id)
+    mark_user_activity(user_id, callback.message.chat.id)
+    session = ensure_session(user_id)
+    target_user_id = session.get("writing_target_user_id")
+    if not target_user_id:
+        await respond_to_callback(
+            callback,
+            writing_selection_text(user_id, 0),
+            reply_markup=build_writing_candidates_kb(user_id, 0),
+        )
+        return
+    session["writing_flow_mode"] = "self"
+    await respond_to_callback(
+        callback,
+        writing_topic_mode_text(user_id, target_user_id),
+        reply_markup=build_writing_topic_mode_kb(user_id),
+    )
+
+
+@dp.callback_query(F.data == "writing:mode:request")
+async def writing_mode_request(callback: CallbackQuery):
+    await callback.answer()
+    user_id = str(callback.from_user.id)
+    mark_user_activity(user_id, callback.message.chat.id)
+    session = ensure_session(user_id)
+    target_user_id = session.get("writing_target_user_id")
+    if not target_user_id:
+        await respond_to_callback(
+            callback,
+            writing_selection_text(user_id, 0),
+            reply_markup=build_writing_candidates_kb(user_id, 0),
+        )
+        return
+    session["writing_flow_mode"] = "request"
     await respond_to_callback(
         callback,
         writing_topic_mode_text(user_id, target_user_id),
@@ -2064,6 +2245,21 @@ async def writing_topic_mode_suggested(callback: CallbackQuery):
     mark_user_activity(user_id, callback.message.chat.id)
     session = ensure_session(user_id)
     session["awaiting_writing_topic"] = False
+    if session.get("writing_flow_mode") == "request":
+        target_user_id = session.get("writing_target_user_id")
+        if not target_user_id:
+            await respond_to_callback(callback, writing_menu_text(user_id), reply_markup=build_writing_menu_kb(user_id))
+            return
+        band = writing_topic_band_for_level(get_english_level(target_user_id))
+        choices = generate_writing_topic_choices(band)
+        session["writing_topic_band"] = band
+        session["writing_topic_choices"] = choices
+        await respond_to_callback(
+            callback,
+            writing_topic_suggestions_text(user_id, band, choices),
+            reply_markup=build_writing_topic_suggestions_kb(user_id, band, choices),
+        )
+        return
     await respond_to_callback(
         callback,
         writing_topic_level_text(user_id),
@@ -2078,6 +2274,9 @@ async def writing_topic_level_pick(callback: CallbackQuery):
     mark_user_activity(user_id, callback.message.chat.id)
     band = callback.data.rsplit(":", maxsplit=1)[1]
     session = ensure_session(user_id)
+    if session.get("writing_flow_mode") == "request":
+        target_user_id = session.get("writing_target_user_id")
+        band = writing_topic_band_for_level(get_english_level(target_user_id)) if target_user_id else band
     choices = generate_writing_topic_choices(band)
     session["writing_topic_band"] = band
     session["writing_topic_choices"] = choices
@@ -2119,6 +2318,9 @@ async def writing_topic_pick(callback: CallbackQuery):
     topic = choices[index]
     session["writing_topic"] = topic
     session["awaiting_writing_topic"] = False
+    if session.get("writing_flow_mode") == "request":
+        await send_writing_topic_request(callback, user_id, topic)
+        return
     session["awaiting_writing_text"] = True
     await callback.message.answer(writing_text_prompt_text(user_id, topic))
 
@@ -2140,6 +2342,8 @@ async def writing_view_task(callback: CallbackQuery):
         return
     if task["receiver_id"] == user_id and task["status"] == "sent":
         reply_markup = build_writing_task_kb(user_id, task_id)
+    elif task["receiver_id"] == user_id and task["status"] == "topic_sent":
+        reply_markup = build_writing_topic_response_kb(user_id, task_id)
     else:
         reply_markup = build_writing_menu_kb(user_id)
     await respond_to_callback(callback, writing_task_details_text(user_id, task), reply_markup=reply_markup)
@@ -2167,7 +2371,29 @@ async def writing_open_task(callback: CallbackQuery):
     if task["status"] == "reviewed":
         await respond_to_callback(callback, writing_task_details_text(user_id, task), reply_markup=build_writing_menu_kb(user_id))
         return
+    if task["status"] == "topic_sent":
+        await respond_to_callback(callback, writing_task_text(user_id, task), reply_markup=build_writing_topic_response_kb(user_id, task_id))
+        return
     await respond_to_callback(callback, writing_task_text(user_id, task), reply_markup=build_writing_task_kb(user_id, task_id))
+
+
+@dp.callback_query(F.data.startswith("writing:respond_topic:"))
+async def writing_respond_topic(callback: CallbackQuery):
+    await callback.answer()
+    user_id = str(callback.from_user.id)
+    mark_user_activity(user_id, callback.message.chat.id)
+    task_id = int(callback.data.rsplit(":", maxsplit=1)[1])
+    task = get_writing_task(task_id)
+    if not task or task["receiver_id"] != user_id or task["status"] != "topic_sent":
+        text = "Это задание уже недоступно." if get_language(user_id) == "ru" else "This task is no longer available."
+        await respond_to_callback(callback, text, reply_markup=build_main_menu_kb(user_id))
+        return
+    session = ensure_session(user_id)
+    reset_writing_flow(session)
+    session["awaiting_writing_topic_response"] = True
+    session["writing_task_id"] = task_id
+    session["writing_topic"] = task["topic"]
+    await callback.message.answer(writing_topic_request_prompt_text(user_id, task["topic"]))
 
 
 @dp.callback_query(F.data.startswith("writing:correct:"))
@@ -2714,6 +2940,70 @@ async def text_input_handler(message: Message):
 
         session["writing_topic"] = topic
         session["awaiting_writing_topic"] = False
+        if session.get("writing_flow_mode") == "request":
+            target_user_id = session.get("writing_target_user_id")
+            level = get_english_level(user_id)
+            if not target_user_id or target_user_id == user_id:
+                reset_writing_flow(session)
+                await message.answer(
+                    "Не удалось определить получателя. Выбери собеседника заново."
+                    if get_language(user_id) == "ru"
+                    else "Could not determine the receiver. Please choose a partner again.",
+                    reply_markup=build_main_menu_kb(user_id),
+                )
+                return
+
+            target_profile = get_user_profile(target_user_id)
+            writer_level = target_profile.get("english_level", "")
+            if writer_level not in ENGLISH_LEVELS or not target_profile.get("chat_id"):
+                reset_writing_flow(session)
+                await message.answer(
+                    "Этот собеседник сейчас недоступен. Выбери другого."
+                    if get_language(user_id) == "ru"
+                    else "This partner is unavailable right now. Please choose another one.",
+                    reply_markup=build_main_menu_kb(user_id),
+                )
+                return
+
+            task_id = create_writing_topic_request(user_id, target_user_id, level, writer_level, topic)
+            reset_writing_flow(session)
+            await message.answer(
+                "Тема отправлена. Теперь собеседник напишет письмо, а ты сможешь его проверить."
+                if get_language(user_id) == "ru"
+                else "The topic has been sent. Your partner will write the text, then you will be able to review it.",
+                reply_markup=build_main_menu_kb(user_id),
+            )
+            try:
+                sender_name = display_user_name(user_id)
+                if get_language(target_user_id) == "ru":
+                    receiver_text = (
+                        f"{sender_name} отправил тебе тему для письма.\n\n"
+                        f"Тема: {topic}\n"
+                        f"Уровень темы: {writer_level}"
+                    )
+                else:
+                    receiver_text = (
+                        f"{sender_name} sent you a writing topic.\n\n"
+                        f"Topic: {topic}\n"
+                        f"Topic level: {writer_level}"
+                    )
+                await bot.send_message(
+                    target_profile["chat_id"],
+                    receiver_text,
+                    reply_markup=InlineKeyboardMarkup(
+                        inline_keyboard=[
+                            [
+                                InlineKeyboardButton(
+                                    text="Написать письмо" if get_language(target_user_id) == "ru" else "Write text",
+                                    callback_data=f"writing:respond_topic:{task_id}",
+                                )
+                            ]
+                        ]
+                    ),
+                )
+            except Exception as exc:
+                logger.warning("Could not notify writing topic receiver %s: %s", target_user_id, exc)
+            return
         session["awaiting_writing_text"] = True
         await message.answer(writing_text_prompt_text(user_id, topic))
         return
@@ -2800,6 +3090,87 @@ async def text_input_handler(message: Message):
             )
         except Exception as exc:
             logger.warning("Could not notify writing receiver %s: %s", target_user_id, exc)
+        return
+
+    if session.get("awaiting_writing_topic_response"):
+        task_id = session.get("writing_task_id")
+        task = get_writing_task(task_id) if task_id else None
+        if not task or task["receiver_id"] != user_id or task["status"] != "topic_sent":
+            reset_writing_flow(session)
+            await message.answer(
+                "Это задание уже недоступно."
+                if get_language(user_id) == "ru"
+                else "This task is no longer available.",
+                reply_markup=build_main_menu_kb(user_id),
+            )
+            return
+
+        text_original = message.text.strip()
+        level = get_english_level(user_id)
+        min_sentences = required_sentences_for_level(level)
+        if len(text_original) > MAX_WRITING_TEXT_LENGTH:
+            await message.answer(
+                "Текст слишком длинный. Сократи его и отправь снова."
+                if get_language(user_id) == "ru"
+                else "The text is too long. Please shorten it and send it again."
+            )
+            return
+        if not writing_text_is_english(text_original):
+            await message.answer(
+                "Письмо должно быть написано на английском языке. Текст с русскими буквами отправить нельзя."
+                if get_language(user_id) == "ru"
+                else "The writing must be in English. Text with Cyrillic letters cannot be sent."
+            )
+            return
+        if count_sentences(text_original) < min_sentences:
+            await message.answer(
+                f"Текст слишком короткий для твоего уровня. Напиши минимум {min_sentences} предложений."
+                if get_language(user_id) == "ru"
+                else f"Text is too short for your level. Please write at least {min_sentences} sentences."
+            )
+            return
+
+        if not submit_writing_topic_response(task_id, user_id, text_original):
+            reset_writing_flow(session)
+            await message.answer(
+                "Это задание уже недоступно."
+                if get_language(user_id) == "ru"
+                else "This task is no longer available.",
+                reply_markup=build_main_menu_kb(user_id),
+            )
+            return
+
+        updated_task = get_writing_task(task_id)
+        reset_writing_flow(session)
+        await message.answer(
+            "Письмо отправлено на проверку автору темы."
+            if get_language(user_id) == "ru"
+            else "Your text has been sent to the topic author for review.",
+            reply_markup=build_main_menu_kb(user_id),
+        )
+        reviewer_profile = get_user_profile(updated_task["receiver_id"])
+        if reviewer_profile.get("chat_id"):
+            try:
+                await bot.send_message(
+                    reviewer_profile["chat_id"],
+                    (
+                        f"{display_user_name(user_id)} написал письмо по твоей теме.\n\nТема: {updated_task['topic']}"
+                        if get_language(updated_task["receiver_id"]) == "ru"
+                        else f"{display_user_name(user_id)} wrote a text on your topic.\n\nTopic: {updated_task['topic']}"
+                    ),
+                    reply_markup=InlineKeyboardMarkup(
+                        inline_keyboard=[
+                            [
+                                InlineKeyboardButton(
+                                    text="Открыть задание" if get_language(updated_task["receiver_id"]) == "ru" else "Open task",
+                                    callback_data=f"writing:open:{task_id}",
+                                )
+                            ]
+                        ]
+                    ),
+                )
+            except Exception as exc:
+                logger.warning("Could not notify writing topic reviewer %s: %s", updated_task["receiver_id"], exc)
         return
 
     if session.get("awaiting_writing_correction"):

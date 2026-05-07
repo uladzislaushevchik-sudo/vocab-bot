@@ -475,7 +475,7 @@ def expire_due_writings(db_path: Path = DB_FILE, hours: int = 72) -> int:
             """
             UPDATE writings
             SET status = 'expired'
-            WHERE status = 'sent' AND created_at < ?
+            WHERE status IN ('sent', 'topic_sent') AND created_at < ?
             """,
             (cutoff,),
         )
@@ -505,6 +505,57 @@ def create_writing_task(
         return int(cursor.lastrowid)
 
 
+def create_writing_topic_request(
+    requester_id: str,
+    writer_id: str,
+    requester_level: str,
+    writer_level: str,
+    topic: str,
+    db_path: Path = DB_FILE,
+) -> int:
+    created_at = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    with connect_db(db_path) as conn:
+        cursor = conn.execute(
+            """
+            INSERT INTO writings (
+                sender_id, receiver_id, sender_level, receiver_level,
+                topic, text_original, status, created_at
+            ) VALUES (?, ?, ?, ?, ?, '', 'topic_sent', ?)
+            """,
+            (requester_id, writer_id, requester_level, writer_level, topic, created_at),
+        )
+        return int(cursor.lastrowid)
+
+
+def submit_writing_topic_response(task_id: int, writer_id: str, text_original: str, db_path: Path = DB_FILE) -> bool:
+    with connect_db(db_path) as conn:
+        task = conn.execute("SELECT * FROM writings WHERE id = ?", (task_id,)).fetchone()
+        if not task or task["receiver_id"] != writer_id or task["status"] != "topic_sent":
+            return False
+
+        cursor = conn.execute(
+            """
+            UPDATE writings
+            SET sender_id = ?,
+                receiver_id = ?,
+                sender_level = ?,
+                receiver_level = ?,
+                text_original = ?,
+                status = 'sent'
+            WHERE id = ? AND status = 'topic_sent'
+            """,
+            (
+                task["receiver_id"],
+                task["sender_id"],
+                task["receiver_level"],
+                task["sender_level"],
+                text_original,
+                task_id,
+            ),
+        )
+        return bool(cursor.rowcount)
+
+
 def get_writing_task(task_id: int, db_path: Path = DB_FILE) -> dict | None:
     expire_due_writings(db_path)
     with connect_db(db_path) as conn:
@@ -516,7 +567,7 @@ def count_active_writings_for_sender(sender_id: str, db_path: Path = DB_FILE) ->
     expire_due_writings(db_path)
     with connect_db(db_path) as conn:
         row = conn.execute(
-            "SELECT COUNT(*) AS count FROM writings WHERE sender_id = ? AND status = 'sent'",
+            "SELECT COUNT(*) AS count FROM writings WHERE sender_id = ? AND status IN ('sent', 'topic_sent')",
             (sender_id,),
         ).fetchone()
     return int(row["count"])
